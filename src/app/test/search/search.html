@@ -1,0 +1,17 @@
+<div class="oCart--search--product">
+  <input
+    class="oCart-search-product-input"
+    [(ngModel)]="searchText"
+    (input)="onSearchTextChanged()"
+  />
+  <button
+    [ngClass]="{ btn: true, 'btn-search': searchText, 'btn-search-disabled': !searchText }"
+    [disabled]="!searchText"
+  >
+    Search
+  </button>
+</div>
+<!-- -->
+<div class="oCart-search-result-for">
+  <p *ngIf="searchText != ''"><strong>Search result for:</strong> {{ searchText }}</p>
+</div>

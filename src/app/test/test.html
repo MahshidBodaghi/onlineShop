@@ -1,0 +1,27 @@
+<search (searchTextChanged)="setSearchText($event)"></search>
+<filter
+  [all]="totalProductCount"
+  [inStock]="totalProductInStock"
+  [outOfStock]="totalProductOutOfStock"
+  (selectedFilterRadioButtonChanged)="onFilterChange($event)"
+></filter>
+<!-- کانتینر محصولات -->
+<div class="oCart-product-item">
+  <div class="wapper" *ngFor="let prod of products">
+    <product
+      [product]="prod"
+      *ngIf="searchText === '' || prod.name.toLocaleLowerCase().includes(searchText)"
+      [searchText]="searchText"
+    ></product>
+  </div>
+</div>
+
+<!-- 
+<product
+      [product]="prod"
+      *ngIf="
+        selectedFilterRadioButton === 'all' ||
+        prod.is_in_inventory.toString() === selectedFilterRadioButton
+      "
+      [searchText]="searchText"
+    ></product> -->
