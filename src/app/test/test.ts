@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { Product } from './product/product';
 import { Filter } from './filter/filter';
 import { Search } from './search/search';
+import { ProdModel } from '../models/prodModel';
+import { ProductDetail } from './product-detail/product-detail';
 
 @Component({
   selector: 'test',
   standalone: true,
-  imports: [FormsModule, CommonModule, Product, Filter, Search],
+  imports: [FormsModule, CommonModule, Product, Filter, Search, ProductDetail],
   templateUrl: './test.html',
   styleUrl: './test.css',
 })
@@ -18,7 +20,7 @@ export class Test {
   //   this.searchText = event.target.value;
   // }
   // listOfNumbers: number[] = [2, 5, 8, 7, 15, 9, 52];
-
+  selectedProduct!: ProdModel;
   products = [
     {
       id: 1,

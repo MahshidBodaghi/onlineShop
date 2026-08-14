@@ -12,8 +12,8 @@
    PRODUCTS CONTAINER
 ========================================= */
 .oCart-product-item {
-  width: 1040px;
-  margin: 20px auto 40px;
+  width: 850px;
+  margin: 17px 160px 40px !important;
   display: flex;
   flex-wrap: wrap;
   gap: 14px;

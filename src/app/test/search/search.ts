@@ -16,7 +16,9 @@ export class Search {
   // listOfNumbers: number[] = [2, 5, 8, 7, 15, 9, 52];
 
   @Output() searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
-  onSearchTextChanged() {
+  onSearchTextChanged() {}
+  updateSerachText(inputEl: HTMLInputElement) {
+    this.searchText = inputEl.value;
     this.searchTextChanged.emit(this.searchText);
   }
 }

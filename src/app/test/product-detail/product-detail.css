@@ -1,0 +1,466 @@
+/* =====================================================
+   PRODUCT DETAIL PANEL
+   ===================================================== */
+
+/*
+   مهم:
+   هیچ selector عمومی مثل span یا img استفاده نشده.
+   بنابراین CSS این بخش روی کارت‌های محصولات اثر نمی‌گذارد.
+*/
+
+.product-detail-panel {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 415px;
+  max-width: 100%;
+
+  background: #ffffff;
+
+  z-index: 99999;
+
+  box-sizing: border-box;
+
+  padding: 10px 10px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.03);
+}
+
+/* =====================================================
+   CLOSE BUTTON
+   ===================================================== */
+
+.product-detail-close {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 5px 0;
+
+  box-sizing: border-box;
+}
+
+.product-detail-close-btn {
+  width: 35px;
+  height: 35px;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #28282b;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-detail-close-btn:hover {
+  opacity: 0.6;
+}
+
+/* =====================================================
+   PRODUCT IMAGE
+   ===================================================== */
+
+.product-detail-image-box {
+  width: 100%;
+  height: 320px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.product-detail-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* =====================================================
+   PRODUCT CONTENT
+   ===================================================== */
+
+.product-detail-content {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 10px 0;
+}
+
+/* =====================================================
+   PRODUCT NAME
+   ===================================================== */
+
+.product-detail-name {
+  width: 100%;
+
+  margin: 20px 0;
+}
+
+.product-detail-name h2 {
+  margin: 0;
+
+  padding: 0;
+
+  font-size: 24px;
+
+  line-height: 1.3;
+
+  color: #28282b;
+}
+
+/* =====================================================
+   CATEGORIES
+   ===================================================== */
+
+.product-detail-categories {
+  width: 100%;
+
+  margin: 20px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px;
+}
+
+.product-detail-categories span {
+  display: inline-block;
+
+  margin: 0;
+  padding: 5px 20px;
+
+  background: #36454f;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  line-height: 1.2;
+
+  border-radius: 0;
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   PRICE
+   ===================================================== */
+
+.product-detail-price {
+  width: 100%;
+
+  margin: 30px 0;
+
+  padding: 20px 10px;
+
+  box-sizing: border-box;
+
+  background: #fcf55f;
+
+  border: 2px solid #ffc000;
+
+  border-radius: 5px;
+}
+
+.product-detail-price p {
+  margin: 0;
+
+  padding: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.product-detail-price strong {
+  color: #28282b;
+}
+
+.product-old-price {
+  display: inline-block;
+
+  margin-left: 5px;
+  padding: 2px 6px;
+
+  background: red;
+
+  color: #ffffff;
+}
+
+.product-new-price {
+  display: inline-block;
+
+  margin-left: 5px;
+  padding: 2px 6px;
+
+  background: green;
+
+  color: #ffffff;
+}
+
+.product-detail-price small {
+  font-size: 12px;
+
+  color: #28282b;
+}
+
+/* =====================================================
+   GENERAL SECTION
+   ===================================================== */
+
+.product-detail-section {
+  width: 100%;
+
+  margin: 30px 0;
+}
+
+.product-detail-section-title {
+  width: 100%;
+
+  padding: 5px 0;
+
+  border-bottom: 2px solid #cccccc;
+
+  box-sizing: border-box;
+}
+
+.product-detail-section-title h4 {
+  margin: 0;
+
+  padding: 0;
+
+  font-size: 16px;
+
+  color: #28282b;
+}
+
+/* =====================================================
+   SIZE
+   ===================================================== */
+
+.product-detail-sizes {
+  width: 100%;
+
+  margin-top: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.product-size {
+  min-width: 45px;
+  height: 42px;
+
+  padding: 8px 15px;
+
+  border: 0;
+
+  background: #28282b;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  border-radius: 0;
+
+  box-sizing: border-box;
+}
+
+.product-size:hover {
+  background: #444444;
+}
+
+/* =====================================================
+   COLORS
+   ===================================================== */
+
+.product-detail-colors {
+  width: 100%;
+
+  margin-top: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.product-color {
+  display: block;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+.product-color-red {
+  background-color: red;
+}
+
+.product-color-green {
+  background-color: green;
+}
+
+.product-color-black {
+  background-color: black;
+}
+
+.product-color-blue {
+  background-color: blue;
+}
+
+.product-color:hover {
+  transform: scale(1.08);
+}
+
+/* =====================================================
+   DESCRIPTION
+   ===================================================== */
+
+.product-detail-description {
+  width: 100%;
+
+  margin-top: 30px;
+}
+
+.product-description-text {
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+.product-description-text p {
+  margin: 0;
+
+  padding: 0;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  color: #28282b;
+}
+
+/* =====================================================
+   ADD TO CART
+   ===================================================== */
+
+.product-detail-cart {
+  width: 100%;
+
+  margin: 25px 0;
+
+  padding: 0;
+}
+
+.product-add-cart-btn {
+  display: inline-block;
+
+  border: 0;
+
+  background: #28282b;
+
+  color: #ffffff;
+
+  padding: 12px 30px;
+
+  font-size: 20px;
+
+  line-height: 1.3;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+.product-add-cart-btn:hover {
+  background: #111111;
+}
+
+/* =====================================================
+   SCROLLBAR
+   ===================================================== */
+
+.product-detail-panel::-webkit-scrollbar {
+  width: 5px;
+}
+
+.product-detail-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.product-detail-panel::-webkit-scrollbar-thumb {
+  background: #28282b;
+
+  border-radius: 5px;
+}
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media screen and (max-width: 600px) {
+  .product-detail-panel {
+    width: 100%;
+
+    padding: 10px 15px;
+  }
+
+  .product-detail-image-box {
+    height: 280px;
+  }
+
+  .product-detail-name h2 {
+    font-size: 21px;
+  }
+
+  .product-add-cart-btn {
+    width: 100%;
+  }
+}

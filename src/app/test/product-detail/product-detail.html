@@ -1,0 +1,103 @@
+<!-- Product Detail -->
+<div class="product-detail-panel">
+  <!-- Close -->
+  <div class="product-detail-close">
+    <button type="button" class="product-detail-close-btn">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- Product Image -->
+  <div class="product-detail-image-box">
+    <img [src]="product.imageURL" alt="Michael February SK8-Hi" class="product-detail-image" />
+  </div>
+
+  <!-- Product Information -->
+  <div class="product-detail-content">
+    <!-- Product Name -->
+    <div class="product-detail-name">
+      <h2>{{ product.name }}</h2>
+    </div>
+
+    <!-- Category -->
+    <div class="product-detail-categories">
+      <span>MEN</span>
+      <span>NIKE</span>
+      <span>SPORTS</span>
+    </div>
+
+    <!-- Price -->
+    <div class="product-detail-price">
+      <p>
+        <strong>Price Each Pair:</strong>
+
+        <span class="product-old-price">
+          <s>$699</s>
+        </span>
+
+        <span class="product-new-price"> $599 </span>
+
+        <small> (Inclusive of all taxes) </small>
+      </p>
+    </div>
+
+    <!-- Size -->
+    <div class="product-detail-section">
+      <div class="product-detail-section-title">
+        <h4>Available Size</h4>
+      </div>
+
+      <div class="product-detail-sizes">
+        <button type="button" class="product-size">6</button>
+
+        <button type="button" class="product-size">7</button>
+
+        <button type="button" class="product-size">8</button>
+
+        <button type="button" class="product-size">9</button>
+      </div>
+    </div>
+
+    <!-- Color -->
+    <div class="product-detail-section">
+      <div class="product-detail-section-title">
+        <h4>Available Color</h4>
+      </div>
+
+      <div class="product-detail-colors">
+        <button type="button" class="product-color product-color-red" aria-label="Red"></button>
+
+        <button type="button" class="product-color product-color-green" aria-label="Green"></button>
+
+        <button type="button" class="product-color product-color-black" aria-label="Black"></button>
+
+        <button type="button" class="product-color product-color-blue" aria-label="Blue"></button>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="product-detail-description">
+      <div class="product-detail-section-title">
+        <h4>Product Description</h4>
+      </div>
+
+      <div class="product-description-text">
+        <p>DESCRIPTION</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add To Cart -->
+  <div class="product-detail-cart">
+    <button
+      type="button"
+      class="product-add-cart-btn"
+      *ngIf="product.is_in_inventory; else notifyme"
+    >
+      ADD TO CART
+    </button>
+    <ng-template #notifyme
+      ><button type="button" class="product-add-cart-btn">NOTIFY ME</button></ng-template
+    >
+  </div>
+</div>

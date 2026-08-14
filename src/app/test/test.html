@@ -5,23 +5,58 @@
   [outOfStock]="totalProductOutOfStock"
   (selectedFilterRadioButtonChanged)="onFilterChange($event)"
 ></filter>
-<!-- کانتینر محصولات -->
 <div class="oCart-product-item">
-  <div class="wapper" *ngFor="let prod of products">
-    <product
-      [product]="prod"
-      *ngIf="searchText === '' || prod.name.toLocaleLowerCase().includes(searchText)"
-      [searchText]="searchText"
-    ></product>
-  </div>
+  <ng-container *ngFor="let prod of products">
+    <div
+      class="wapper"
+      *ngIf="
+        (searchText === '' || prod.name.toLocaleLowerCase().includes(searchText)) &&
+        (selectedFilterRadioButton === 'all' ||
+          prod.is_in_inventory.toString() === selectedFilterRadioButton)
+      "
+      (click)="selectedProduct = prod"
+    >
+      <product [product]="prod" [searchText]="searchText"></product>
+    </div>
+  </ng-container>
 </div>
 
-<!-- 
-<product
-      [product]="prod"
-      *ngIf="
-        selectedFilterRadioButton === 'all' ||
-        prod.is_in_inventory.toString() === selectedFilterRadioButton
-      "
-      [searchText]="searchText"
-    ></product> -->
+<product-detail *ngIf="selectedProduct" [product]="selectedProduct"> </product-detail>
+<div class="oCart-featured-products">
+  <div class="oCart-featured-products-heading">
+    <h1>Latest Arrival in Popular Brands</h1>
+  </div>
+
+  <div class="oCart-featured-product-item">
+    <h3 class="title">New Arrivals in Nike</h3>
+
+    <p class="description">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+      been the industry's standard dummy text ever since the 1500s.
+    </p>
+
+    <button class="call-to-action">Learn More</button>
+  </div>
+
+  <div class="oCart-featured-product-item">
+    <h3 class="title">New Arrivals in Nike</h3>
+
+    <p class="description">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+      been the industry's standard dummy text ever since the 1500s.
+    </p>
+
+    <button class="call-to-action">Learn More</button>
+  </div>
+
+  <div class="oCart-featured-product-item">
+    <h3 class="title">New Arrivals in Nike</h3>
+
+    <p class="description">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+      been the industry's standard dummy text ever since the 1500s.
+    </p>
+
+    <button class="call-to-action">Learn More</button>
+  </div>
+</div>

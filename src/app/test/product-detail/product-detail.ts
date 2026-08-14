@@ -1,14 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProdModel } from '../../models/prodModel';
+
 @Component({
-  selector: 'product',
+  selector: 'product-detail',
+  standalone: true,
   imports: [CommonModule],
-  templateUrl: './product.html',
-  styleUrl: './product.css',
+  templateUrl: './product-detail.html',
+  styleUrl: './product-detail.css',
 })
-export class Product {
-  selectedProduct!: ProdModel;
+export class ProductDetail {
   @Input() product!: ProdModel;
-  @Input() searchText: string = '';
 }

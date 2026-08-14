@@ -3,10 +3,13 @@
     class="oCart-search-product-input"
     [(ngModel)]="searchText"
     (input)="onSearchTextChanged()"
+    #searchInputText
   />
   <button
-    [ngClass]="{ btn: true, 'btn-search': searchText, 'btn-search-disabled': !searchText }"
-    [disabled]="!searchText"
+    class="btn btn-search"
+    (click)="updateSerachText(searchInputText)"
+    /* [ngClass]="{ btn: true, 'btn-search': searchText, 'btn-search-disabled': !searchText }"
+    [disabled]="!searchText" */
   >
     Search
   </button>
