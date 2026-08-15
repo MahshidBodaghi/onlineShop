@@ -1,0 +1,10 @@
+
+.ocart--top--bar {
+    width: 100%; 
+    text-align: right;
+    padding-top: 3px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-bottom: 2px;
+    font-size: 14px;
+}

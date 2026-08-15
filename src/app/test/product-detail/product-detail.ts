@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProdModel } from '../../models/prodModel';
 
@@ -10,5 +10,11 @@ import { ProdModel } from '../../models/prodModel';
   styleUrl: './product-detail.css',
 })
 export class ProductDetail {
-  @Input() product!: ProdModel;
+  @Input() product: ProdModel| null = null;
+
+  @Output() closeDetail = new EventEmitter<void>();
+
+  closeProductDetail(): void {
+    this.closeDetail.emit();
+  }
 }

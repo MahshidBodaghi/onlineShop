@@ -1,3 +1,5 @@
+
+<app-header></app-header>
 <search (searchTextChanged)="setSearchText($event)"></search>
 <filter
   [all]="totalProductCount"
@@ -21,7 +23,7 @@
   </ng-container>
 </div>
 
-<product-detail *ngIf="selectedProduct" [product]="selectedProduct"> </product-detail>
+<product-detail *ngIf="selectedProduct" [product]="selectedProduct"  (closeDetail)="selectedProduct = null"> </product-detail>
 <div class="oCart-featured-products">
   <div class="oCart-featured-products-heading">
     <h1>Latest Arrival in Popular Brands</h1>

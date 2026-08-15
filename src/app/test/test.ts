@@ -6,22 +6,23 @@ import { Filter } from './filter/filter';
 import { Search } from './search/search';
 import { ProdModel } from '../models/prodModel';
 import { ProductDetail } from './product-detail/product-detail';
+import { TopMenue } from './header/top-menue/top-menue';
+import { MainMenue } from './header/main-menue/main-menue';
+import { NavTop } from './header/nav-top/nav-top';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'test',
   standalone: true,
-  imports: [FormsModule, CommonModule, Product, Filter, Search, ProductDetail],
+  imports: [FormsModule, CommonModule, Product, Filter, Search, ProductDetail, HeaderComponent, NavTop],
   templateUrl: './test.html',
   styleUrl: './test.css',
 })
 export class Test {
   searchText: string = '';
-  // searchTextInput(event: any) {
-  //   this.searchText = event.target.value;
-  // }
-  // listOfNumbers: number[] = [2, 5, 8, 7, 15, 9, 52];
-  selectedProduct!: ProdModel;
-  products = [
+  selectedProduct: ProdModel | null = null;
+
+  products: ProdModel[] = [
     {
       id: 1,
       name: 'Nike React Infinity Run Flyknit',
@@ -33,7 +34,6 @@ export class Test {
       size: [6, 7, 8, 9, 10],
       color: ['White', 'Blue', 'Black'],
       price: 160,
-      // discountPrice: 140,
       is_in_inventory: false,
       items_left: 3,
       imageURL:
@@ -66,7 +66,6 @@ export class Test {
       size: [6, 7, 8, 9],
       color: ['Multi', 'White', 'Blue'],
       price: 110,
-      // discountPrice: 85,
       is_in_inventory: true,
       items_left: 10,
       imageURL:
@@ -100,14 +99,12 @@ export class Test {
       size: [8, 9, 10, 11],
       color: ['Core Black', 'Pure Grey'],
       price: 135,
-      // discountPrice: 115,
       is_in_inventory: false,
       items_left: 8,
       imageURL:
         'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3bbecbdf584e40398446a8bf0117cf62_9366/Samba_OG_Shoes_White_B75806_01_00_standard.jpg',
       slug: 'reebok-nano-x2',
     },
-    // ... ادامه محصولات تا ۳۰ مورد با ساختار مشابه
     {
       id: 6,
       name: 'Asics Gel-Kayano 28',
@@ -134,7 +131,6 @@ export class Test {
       size: [7, 8, 9, 10, 11, 12],
       color: ['Navy', 'Grey', 'Burgundy'],
       price: 85,
-      // discountPrice: 75,
       is_in_inventory: false,
       items_left: 15,
       imageURL: 'https://i8.amplience.net/s/scvl/178735_396397_SET/1?fmt=auto',
@@ -150,7 +146,6 @@ export class Test {
       size: [8, 9, 10, 11],
       color: ['Red', 'Black', 'White'],
       price: 125,
-      // discountPrice: 125,
       is_in_inventory: true,
       items_left: 1,
       imageURL:
@@ -167,7 +162,6 @@ export class Test {
       size: [4, 5, 6, 7, 8, 9, 10, 11],
       color: ['Parchment', 'Black', 'Sunflower'],
       price: 90,
-      // discountPrice: 80,
       is_in_inventory: true,
       items_left: 20,
       imageURL:
@@ -201,7 +195,6 @@ export class Test {
       size: [5, 6, 7, 8, 9, 10],
       color: ['Black/White', 'Navy'],
       price: 70,
-      // discountPrice: 60,
       is_in_inventory: true,
       items_left: 25,
       imageURL: 'https://images.asics.com/is/image/asics/1012B047_402_SR_RT_GLB?$zoom$',
@@ -233,7 +226,6 @@ export class Test {
       size: [9, 10, 11, 12],
       color: ['Black', 'Blue'],
       price: 130,
-      // discountPrice: 110,
       is_in_inventory: false,
       items_left: 5,
       imageURL:
@@ -266,7 +258,6 @@ export class Test {
       size: [5, 6, 7],
       color: ['White'],
       price: 95,
-      // discountPrice: 65,
       is_in_inventory: false,
       items_left: 9,
       imageURL:
@@ -299,7 +290,6 @@ export class Test {
       size: [4, 5, 6, 7, 8, 9, 10, 11, 12],
       color: ['White/Green', 'White/Navy'],
       price: 95,
-      // discountPrice: 85,
       is_in_inventory: true,
       items_left: 18,
       imageURL: 'https://i8.amplience.net/s/scvl/178735_396397_SET/1?fmt=auto',
@@ -348,7 +338,6 @@ export class Test {
       size: [8, 9, 10, 11, 12],
       color: ['Blue Fog', 'Black'],
       price: 140,
-      // discountPrice: 130,
       is_in_inventory: true,
       items_left: 10,
       imageURL:
@@ -365,7 +354,6 @@ export class Test {
       size: [8, 9, 10],
       color: ['White', 'Navy'],
       price: 100,
-      // discountPrice: 90,
       is_in_inventory: false,
       items_left: 5,
       imageURL: 'https://images.asics.com/is/image/asics/1012B047_402_SR_RT_GLB?$zoom$',
@@ -397,7 +385,6 @@ export class Test {
       size: [6, 7, 8, 9, 10, 11],
       color: ['Wheat', 'Black'],
       price: 190,
-      // discountPrice: 180,
       is_in_inventory: false,
       items_left: 8,
       imageURL:
@@ -447,7 +434,6 @@ export class Test {
       size: [7, 8, 9, 10, 11],
       color: ['Core Black', 'Cloud White'],
       price: 150,
-      // discountPrice: 120,
       is_in_inventory: true,
       items_left: 14,
       imageURL: 'https://images.asics.com/is/image/asics/1012B047_402_SR_RT_GLB?$zoom$',
@@ -463,7 +449,6 @@ export class Test {
       size: [6, 7, 8, 9, 10],
       color: ['Black', 'Red', 'Navy'],
       price: 75,
-      // discountPrice: 65,
       is_in_inventory: false,
       items_left: 20,
       imageURL: 'https://i8.amplience.net/s/scvl/178735_396397_SET/1?fmt=auto',
@@ -479,7 +464,6 @@ export class Test {
       size: [8, 9, 10, 11, 12],
       color: ['Grey', 'Black'],
       price: 185,
-      // discountPrice: 185,
       is_in_inventory: true,
       items_left: 5,
       imageURL:
@@ -513,7 +497,6 @@ export class Test {
       size: [5, 6, 7, 8, 9, 10, 11, 12],
       color: ['Black', 'Cherry Red'],
       price: 170,
-      // discountPrice: 160,
       is_in_inventory: false,
       items_left: 6,
       imageURL:
@@ -521,11 +504,13 @@ export class Test {
       slug: 'dr-martens-1460',
     },
   ];
+
   totalProductCount = this.products.length;
   totalProductInStock = this.products.filter((p) => p.is_in_inventory === true).length;
   totalProductOutOfStock = this.products.filter((p) => p.is_in_inventory === false).length;
 
   selectedFilterRadioButton: string = 'all';
+
   onFilterChange(value: string) {
     this.selectedFilterRadioButton = value;
   }
