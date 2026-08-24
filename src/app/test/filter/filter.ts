@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'filter',
-  imports: [FormsModule],
+  imports: [FormsModule,MatButtonToggleModule],
   templateUrl: './filter.html',
   styleUrl: './filter.css',
 })

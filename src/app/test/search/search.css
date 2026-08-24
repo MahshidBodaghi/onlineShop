@@ -1,53 +1,66 @@
-/* =========================================
-   SEARCH BAR
-========================================= */
 .oCart--search--product {
-  width: 575px;
-  height: 25px;
-  margin: 30px auto 20px;
+  width: 500px;
+  min-height: 40px;
+  margin: 15px auto 20px;
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  gap: 10px;
 }
+
+.oCart--search--product mat-form-field {
+  flex: 1;
+  width: 100%;
+}
+
 
 .oCart-search-product-input {
-  flex: 1;
-  height: 25px;
-  box-sizing: border-box;
-  border: 1px solid #aaa;
-  background-color: #f5f5f5;
-  padding: 3px 7px;
-  font-size: 16px;
-  outline: none;
+  font-size: 14px;
 }
 
+
 .btn-search {
-  width: 70px;
-  height: 25px;
+  min-width: 50px;
+  height: 40px;
   border: none;
   background-color: #292929;
   color: #fff;
   font-size: 14px;
   cursor: pointer;
 }
-.btn-search-disabled {
-  width: 70px;
-  height: 25px;
-  border: none;
-  background-color: #adadad;
-  color: #838282;
-  font-size: 14px;
-  cursor: pointer;
-}
+
+
 .btn-search:hover {
   background-color: #111;
 }
 
-/* =========================================
-   SEARCH RESULT
-========================================= */
+
+.btn-search-disabled {
+  min-width: 90px;
+  height: 56px;
+
+  border: none;
+  background-color: #adadad;
+  color: #838282;
+
+  font-size: 14px;
+  cursor: not-allowed;
+}
+
+
 .oCart-search-result-for {
   width: 1040px;
   margin: 0 auto 25px;
+
   font-size: 17px;
   color: #222;
+}
+
+@media (max-width: 750px) {
+  .oCart--search--product {
+    width: calc(100% - 30px);
+  }
+
+  .oCart-search-result-for {
+    width: calc(100% - 30px);
+  }
 }

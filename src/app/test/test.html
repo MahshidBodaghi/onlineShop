@@ -1,64 +1,91 @@
+<ng-container *ngIf="!showCheckout">
+  <app-header></app-header>
 
-<app-header></app-header>
-<search (searchTextChanged)="setSearchText($event)"></search>
-<filter
-  [all]="totalProductCount"
-  [inStock]="totalProductInStock"
-  [outOfStock]="totalProductOutOfStock"
-  (selectedFilterRadioButtonChanged)="onFilterChange($event)"
-></filter>
-<div class="oCart-product-item">
-  <ng-container *ngFor="let prod of products">
-    <div
-      class="wapper"
-      *ngIf="
-        (searchText === '' || prod.name.toLocaleLowerCase().includes(searchText)) &&
-        (selectedFilterRadioButton === 'all' ||
-          prod.is_in_inventory.toString() === selectedFilterRadioButton)
-      "
-      (click)="selectedProduct = prod"
-    >
-      <product [product]="prod" [searchText]="searchText"></product>
+  <search
+    (searchTextChanged)="setSearchText($event)"
+  ></search>
+
+  <filter
+    [all]="totalProductCount"
+    [inStock]="totalProductInStock"
+    [outOfStock]="totalProductOutOfStock"
+    (selectedFilterRadioButtonChanged)="onFilterChange($event)"
+  ></filter>
+
+  <div class="oCart-product-item">
+    <ng-container *ngFor="let prod of paginatedProducts">
+      <div
+        class="wapper"
+        (click)="selectedProduct = prod"
+      >
+        <product
+          [product]="prod"
+          [searchText]="searchText"
+        ></product>
+      </div>
+    </ng-container>
+  </div>
+
+  <mat-paginator
+    [length]="filteredProducts.length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[4, 8, 12, 16]"
+    [pageIndex]="pageIndex"
+    (page)="onPageChange($event)"
+    aria-label="Select page"
+  ></mat-paginator>
+
+  <product-detail
+    *ngIf="selectedProduct"
+    [product]="selectedProduct"
+    (closeDetail)="selectedProduct = null"
+    (checkoutRequested)="openCheckout()"
+  ></product-detail>
+
+  <div class="oCart-featured-products">
+    <div class="oCart-featured-products-heading">
+      <h1>Latest Arrival in Popular Brands</h1>
     </div>
-  </ng-container>
-</div>
 
-<product-detail *ngIf="selectedProduct" [product]="selectedProduct"  (closeDetail)="selectedProduct = null"> </product-detail>
-<div class="oCart-featured-products">
-  <div class="oCart-featured-products-heading">
-    <h1>Latest Arrival in Popular Brands</h1>
+    <div class="oCart-featured-product-item">
+      <h3 class="title">New Arrivals in Nike</h3>
+
+      <p class="description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s.
+      </p>
+
+      <button class="call-to-action">Learn More</button>
+    </div>
+
+    <div class="oCart-featured-product-item">
+      <h3 class="title">New Arrivals in Nike</h3>
+
+      <p class="description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s.
+      </p>
+
+      <button class="call-to-action">Learn More</button>
+    </div>
+
+    <div class="oCart-featured-product-item">
+      <h3 class="title">New Arrivals in Nike</h3>
+
+      <p class="description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s.
+      </p>
+
+      <button class="call-to-action">Learn More</button>
+    </div>
   </div>
+</ng-container>
 
-  <div class="oCart-featured-product-item">
-    <h3 class="title">New Arrivals in Nike</h3>
-
-    <p class="description">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-      been the industry's standard dummy text ever since the 1500s.
-    </p>
-
-    <button class="call-to-action">Learn More</button>
-  </div>
-
-  <div class="oCart-featured-product-item">
-    <h3 class="title">New Arrivals in Nike</h3>
-
-    <p class="description">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-      been the industry's standard dummy text ever since the 1500s.
-    </p>
-
-    <button class="call-to-action">Learn More</button>
-  </div>
-
-  <div class="oCart-featured-product-item">
-    <h3 class="title">New Arrivals in Nike</h3>
-
-    <p class="description">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-      been the industry's standard dummy text ever since the 1500s.
-    </p>
-
-    <button class="call-to-action">Learn More</button>
-  </div>
-</div>
+<checkout
+  *ngIf="showCheckout"
+  (backToProducts)="closeCheckout()"
+></checkout>

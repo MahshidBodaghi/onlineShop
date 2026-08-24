@@ -1,0 +1,73 @@
+:host {
+    display: block;
+  }
+  
+  .sign-up-sheet {
+    width: min(100%, 520px);
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+  }
+  
+  .sign-up-sheet__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .sign-up-sheet__title {
+    margin: 0;
+    color: #263238;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .sign-up-sheet__subtitle {
+    margin: 8px 0 0;
+    color: #607d8b;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .sign-up-form mat-form-field {
+    width: 100%;
+  }
+  
+  .sign-up-sheet__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .sign-up-sheet__actions button {
+    min-width: 110px;
+  }
+  
+  @media (max-width: 600px) {
+    .sign-up-sheet {
+      width: 100%;
+      padding: 20px 16px;
+    }
+  
+    .sign-up-sheet__title {
+      font-size: 21px;
+    }
+  
+    .sign-up-sheet__actions {
+      flex-direction: column-reverse;
+    }
+  
+    .sign-up-sheet__actions button {
+      width: 100%;
+    }
+  }
+  

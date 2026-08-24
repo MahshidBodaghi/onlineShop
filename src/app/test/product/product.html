@@ -1,28 +1,47 @@
-<div class="oCart--product--item">
+<mat-card class="oCart--product--item">
+
   <div class="ocart-on-sale-tag" *ngIf="product.discountPrice">
     {{ (100 - (product.discountPrice / product.price) * 100).toFixed(0) }} % OFF
   </div>
-  <div class="oCart--add--to--wishlist">
-    <i class="fa fa-heart-o" aria-hidden="true"></i>
-    <!-- <i>{{ xx }}</i> -->
-  </div>
+
+  <button
+  type="button"
+  class="oCart--add--to--wishlist"
+  mat-icon-button
+  [class.favorite-active]="isFavorite"
+  [matTooltip]="isFavorite ? 'Remove from favorites' : 'Add to favorites'"
+  aria-label="افزودن به علاقه‌مندی‌ها"
+  (click)="toggleFavorite()"
+>
+  <mat-icon>
+    {{ isFavorite ? 'favorite' : 'favorite_border' }}
+  </mat-icon>
+</button>
   <div class="oCart-product-image">
-    <img [src]="product.imageURL" class="oCart-product-img" />
+    <img [src]="product.imageURL" class="oCart-product-img" [alt]="product.name" />
   </div>
 
-  <div class="oCart--add--to--price">{{ product.price }}</div>
+  <mat-card-content class="oCart-product-content">
+    <div class="oCart--add--to--price">{{ product.price }}</div>
 
-  <div class="oCart-product-name">{{ product.name }}</div>
+    <div class="oCart-product-name">
+      {{ product.name }}
+    </div>
 
-  <div class="oCart-product-category">
-    {{ product.gender }} . {{ product.category }} . {{ product.brand }}
-  </div>
+    <div class="oCart-product-category">
+      {{ product.gender }} . {{ product.category }} . {{ product.brand }}
+    </div>
 
-  <div class="oCart-available-colors">{{ product.color.length }} Colors . Best Seller</div>
-  <div
-    class="ocart-product-inStock"
-    [ngStyle]="{ fontWeight: 'bold', color: product.is_in_inventory ? 'green' : 'red' }"
-  >
-    {{ product.is_in_inventory ? 'Available In Stock' : 'Not Available In Stock' }}
-  </div>
-</div>
+    <div class="oCart-available-colors">
+      {{ product.color.length }} Colors . Best Seller
+    </div>
+
+    <div
+      class="ocart-product-inStock"
+      [ngStyle]="{ fontWeight: 'bold', color: product.is_in_inventory ? 'green' : 'red' }"
+    >
+      {{ product.is_in_inventory ? 'Available In Stock' : 'Not Available In Stock' }}
+    </div>
+  </mat-card-content>
+
+</mat-card>

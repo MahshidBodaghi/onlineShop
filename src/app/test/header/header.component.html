@@ -1,14 +1,23 @@
 <nav-top></nav-top>
-<div class="ocart--header">
-  <div class="ocart--logo">
-    <p>ShopLand</p>
-    <img [src]="logoImage" >
-   
-     </div>
-  <div class="ocart--header--nav">
-    <top-menue></top-menue>
-    <div class="ocart--bottom--bar">
-      <main-menue></main-menue>
-        </div>
+
+<mat-toolbar class="ocart-header">
+
+  <div class="header-right">
+    <main-menue></main-menue>
   </div>
-</div>
+
+
+  <div class="header-center">
+    <div class="ocart-logo">
+      <span class="logo-text">ShopLand</span>
+      <img [src]="logoImage" alt="ShopLand logo" />
+    </div>
+  </div>
+
+
+  <div class="header-left">
+ 
+    <top-menue></top-menue>
+  </div>
+  
+</mat-toolbar>

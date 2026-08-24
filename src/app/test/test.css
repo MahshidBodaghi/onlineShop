@@ -1,3 +1,4 @@
+
 .oCart-product-item {
   width: 1200px !important;
   margin: 17px auto 40px !important;
@@ -201,18 +202,14 @@
 }
 
 .oCart--search--product {
-  width: 1000px !important;
+  width: 1200px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   box-sizing: border-box;
-  display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  grid-auto-flow: row !important;
-  grid-auto-rows: auto;
-  column-gap: 14px !important;
-  row-gap: 18px !important;
-  align-items: start;
-  justify-items: stretch;
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
 }
 
 .oCart--search--product > .oCart--product--item {
@@ -409,4 +406,9 @@
   background-color: #605d5d;
   border: none;
   cursor: pointer;
+}
+mat-paginator {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
 }

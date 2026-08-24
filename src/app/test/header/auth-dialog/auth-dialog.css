@@ -1,0 +1,30 @@
+.auth-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  min-width: 320px;
+}
+
+.auth-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-dialog__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.auth-dialog__content {
+  color: #666;
+  font-size: 14px;
+}
+
+.auth-dialog__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}

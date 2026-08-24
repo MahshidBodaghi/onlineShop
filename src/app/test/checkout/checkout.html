@@ -1,0 +1,119 @@
+<div class="checkout-container">
+    <h2>Checkout & Order Details</h2>
+    <button
+    mat-button
+    type="button"
+    (click)="backToProductList()"
+  >
+    <mat-icon>arrow_back</mat-icon>
+    Back to Products
+  </button>  
+    <mat-stepper linear #stepper>
+        <mat-step [stepControl]="userInfoForm" label="Personal Info">
+        <form [formGroup]="userInfoForm" class="step-form">
+          <mat-form-field appearance="outline">
+            <mat-label>Full Name</mat-label>
+            <input matInput formControlName="fullName" placeholder="Mahshid bodaghi" />
+            <mat-error *ngIf="userInfoForm.get('fullName')?.hasError('required')">
+              Full name is required
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="email" placeholder="example@mail.com" />
+            <mat-error *ngIf="userInfoForm.get('email')?.hasError('required')">
+              Email is required
+            </mat-error>
+            <mat-error *ngIf="userInfoForm.get('email')?.hasError('email')">
+              Enter a valid email
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="phone" placeholder="09123456789" />
+            <mat-error *ngIf="userInfoForm.get('phone')?.hasError('required')">
+              Phone number is required
+            </mat-error>
+          </mat-form-field>
+  
+          <div class="stepper-actions">
+            <button mat-flat-button color="primary" matStepperNext [disabled]="userInfoForm.invalid">
+              Next
+            </button>
+          </div>
+        </form>
+      </mat-step>
+  
+      <mat-step [stepControl]="shippingForm" label="Shipping Address">
+        <form [formGroup]="shippingForm" class="step-form">
+          <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <input matInput formControlName="city" placeholder="Tehran" />
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Street Address</mat-label>
+            <textarea matInput formControlName="address" rows="2" placeholder="Full address details"></textarea>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Postal Code</mat-label>
+            <input matInput formControlName="postalCode" placeholder="1234567890" />
+          </mat-form-field>
+  
+          <div class="stepper-actions">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-flat-button color="primary" matStepperNext [disabled]="shippingForm.invalid">
+              Next
+            </button>
+          </div>
+        </form>
+      </mat-step>
+  
+    
+      <mat-step [stepControl]="paymentForm" label="Payment">
+        <form [formGroup]="paymentForm" class="step-form">
+          <div class="payment-options">
+            <mat-radio-group formControlName="paymentMethod">
+              <mat-radio-button value="online">Online Payment (Gateway)</mat-radio-button>
+              <mat-radio-button value="cod">Cash on Delivery</mat-radio-button>
+            </mat-radio-group>
+          </div>
+  
+          <mat-form-field appearance="outline" *ngIf="paymentForm.get('paymentMethod')?.value === 'online'">
+            <mat-label>Card Number</mat-label>
+            <input matInput formControlName="cardNumber" placeholder="6037-xxxx-xxxx-xxxx" />
+          </mat-form-field>
+  
+          <div class="stepper-actions">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-flat-button color="primary" matStepperNext [disabled]="paymentForm.invalid">
+              Next
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step label="Review & Confirm">
+        <div class="summary-box">
+          <h3>Order Summary</h3>
+          <p><strong>Name:</strong> {{ userInfoForm.value.fullName }}</p>
+          <p><strong>Email:</strong> {{ userInfoForm.value.email }}</p>
+          <p><strong>Address:</strong> {{ shippingForm.value.city }}, {{ shippingForm.value.address }}</p>
+          <p><strong>Payment Method:</strong> {{ paymentForm.value.paymentMethod === 'online' ? 'Online' : 'Cash on Delivery' }}</p>
+        </div>
+  
+        <div class="stepper-actions">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button mat-flat-button color="accent" (click)="submitOrder()">
+            Place Order
+          </button>
+        </div>
+      </mat-step>
+  
+    </mat-stepper>
+  </div>
+  
