@@ -1,6 +1,28 @@
 <div class="ocart--top--bar">
-    <a href="#">Help</a>
-    <a href="#">Exchange & Returns</a>
-    <a href="#">Order Tracker</a>
-    <a href="#">SignUp / Login</a>
-  </div>
+  <button
+    mat-button
+    type="button"
+    matTooltip="View favorites"
+  >
+    <mat-icon
+      [matBadge]="favoriteCount"
+      [matBadgeHidden]="favoriteCount === 0"
+      matBadgeColor="warn"
+      matBadgeSize="small"
+    >
+      favorite
+    </mat-icon>
+
+    <span>Favorites</span>
+  </button>
+
+  <button
+    mat-button
+    type="button"
+    matTooltip="Sign up or login"
+    (click)="openAuthDialog()"
+  >
+    <mat-icon>person</mat-icon>
+    <span>Sign Up / Login</span>
+  </button>
+</div>

@@ -2,11 +2,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TopMenue } from "./top-menue/top-menue";
 import { MainMenue } from "./main-menue/main-menue";
 import { NavTop } from "./nav-top/nav-top";
+import { MatToolbarModule } from '@angular/material/toolbar';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TopMenue, MainMenue,NavTop],
-
+  imports: [TopMenue, MainMenue,NavTop,MatToolbarModule],
+ // changeDetection: ChangeDetectionStrategy.Default,
   templateUrl:'./header.component.html',
   styleUrl: './header.component.css',
 })

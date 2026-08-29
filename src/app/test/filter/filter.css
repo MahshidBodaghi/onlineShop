@@ -1,9 +1,41 @@
+
+
 .filter-container {
-  margin: 10px 0px;
-  padding: 0px 20vh;
+  width: 100%;
+  min-height: 48px;
+  margin-left: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap:12px;
+  box-sizing: border-box;
 }
 
-input[type='radio'] {
-  margin-left: 10px;
-  margin-right: 5px;
+.filter-title {
+  color: #292929;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: 750px) {
+  .filter-container {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .filter-title {
+    width: 100%;
+  }
+
+  .filter-group {
+    width: 100%;
+    overflow-x: auto;
+  }
 }

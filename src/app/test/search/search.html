@@ -1,20 +1,29 @@
 <div class="oCart--search--product">
-  <input
-    class="oCart-search-product-input"
-    [(ngModel)]="searchText"
-    (input)="onSearchTextChanged()"
-    #searchInputText
-  />
+  <mat-form-field appearance="outline" subscriptSizing="dynamic">
+    <mat-label>Search</mat-label>
+    <mat-icon matPrefix>search</mat-icon>
+    <input
+      matInput
+      class="oCart-search-product-input"
+      [(ngModel)]="searchText"
+      (input)="onSearchTextChanged()"
+      #searchInputText
+    />
+  </mat-form-field>
+
   <button
+    mat-raised-button
+    color="primary"
+    matTooltip="Click to search products"
     class="btn btn-search"
     (click)="updateSerachText(searchInputText)"
-    /* [ngClass]="{ btn: true, 'btn-search': searchText, 'btn-search-disabled': !searchText }"
-    [disabled]="!searchText" */
   >
     Search
   </button>
 </div>
-<!-- -->
+
 <div class="oCart-search-result-for">
-  <p *ngIf="searchText != ''"><strong>Search result for:</strong> {{ searchText }}</p>
+  <p *ngIf="searchText != ''">
+    <strong>Search result for:</strong> {{ searchText }}
+  </p>
 </div>

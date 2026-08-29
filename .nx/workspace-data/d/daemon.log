@@ -679,3 +679,202 @@ DEBUG nx::native::watch::watcher: watching stopped origin=D:\onlineShop
 [NX v23.1.2 Daemon Server] - 2026-08-29T07:15:28.719Z - [WATCHER]: Stopping the watcher for D:\onlineShop (outputs)
 [NX v23.1.2 Daemon Server] - 2026-08-29T07:15:28.719Z - Server stopped because: "this process is no longer the current daemon (native)"
 Failed to flush telemetry: Telemetry channel closed
+DEBUG nx::native::watch::watcher: watching started origin=D:\onlineShop
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:28.974Z - [WATCHER]: Subscribed to changes within: D:\onlineShop (native)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.111Z - Time taken for 'workspace context init' 0.761400000000009ms
+DEBUG nx::native::telemetry: Telemetry service initialized successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.153Z - New daemon starting from: D:\onlineShop\node_modules\nx\dist\src\daemon\server\server.js
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.153Z - New daemon __dirname: D:\onlineShop\node_modules\nx\dist\src\daemon\server
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.153Z - New daemon nxVersion: 23.1.2
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.154Z - New daemon getInstalledNxVersion(): 23.1.2
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.158Z - [Server] Starting outdated check interval (20ms)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.160Z - Started listening on: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\5ba46b3432fb1acd4ace\d.sock
+DEBUG nx::native::watch::watcher: watching started origin=D:\onlineShop
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.172Z - [LATEST-NX]: Pulling latest Nx...
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.190Z - [AI-AGENTS]: Starting agent configuration status computation
+[isolated-plugin] spawned worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 18400, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-0-80ef42a1.sock)
+[isolated-plugin] spawned worker for "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 18576, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-1-b5461a00.sock)
+[isolated-plugin] spawned worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 29052, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-2-db3da982.sock)
+[isolated-plugin] spawned worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 27644, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-3-3ecfc2f0.sock)
+[isolated-plugin] spawned worker for "@nx/angular" (pid: 13876, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-4-b5ee5f02.sock)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.327Z - Time taken for 'hash changed files from watcher' 0.013899999999978263ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 18576) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-1-b5461a00.sock
+[1m[33mTime taken for 'plugin worker 18576 code loading' 520.4465ms[39m[22m
+[isolated-plugin] connected to worker for "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 18576)
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 18576) connected
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.850Z - Time taken for 'start-plugin-worker:D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json' 593.2406000000001ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 18400) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-0-80ef42a1.sock
+[1m[33mTime taken for 'plugin worker 18400 code loading' 553.5840000000001ms[39m[22m
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 18576) loaded successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.854Z - Time taken for 'Load Nx Plugin: D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json' 683.8686ms
+[isolated-plugin] connected to worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 18400)
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 18400) connected
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.865Z - Time taken for 'start-plugin-worker:D:\onlineShop\node_modules\nx\dist\src\plugins\js' 674.0599ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 18400) loaded successfully
+[isolated-plugin] connected to worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 29052)
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 29052) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-2-db3da982.sock
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.880Z - Time taken for 'Load Nx Plugin: D:\onlineShop\node_modules\nx\dist\src\plugins\js' 709.8127999999999ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.880Z - Time taken for 'start-plugin-worker:D:\onlineShop\node_modules\nx\dist\src\plugins\package-json' 610.4318000000001ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 29052) connected
+[1m[33mTime taken for 'plugin worker 29052 code loading' 545.1523ms[39m[22m
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 29052) loaded successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.890Z - Time taken for 'Load Nx Plugin: D:\onlineShop\node_modules\nx\dist\src\plugins\package-json' 719.8229000000001ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 27644) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-3-3ecfc2f0.sock
+[1m[33mTime taken for 'plugin worker 27644 code loading' 536.5363ms[39m[22m
+[isolated-plugin] connected to worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 27644)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.901Z - Time taken for 'start-plugin-worker:D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json' 615.2284999999999ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 27644) connected
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 27644) loaded successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.907Z - Time taken for 'loadDefaultNxPlugins' 738.0293ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.907Z - Time taken for 'Load Nx Plugin: D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json' 735.7565000000001ms
+[plugin-worker] "@nx/angular" (pid: 13876) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p27900-4-b5ee5f02.sock
+[1m[33mTime taken for 'plugin worker 13876 code loading' 552.5482000000001ms[39m[22m
+[isolated-plugin] connected to worker for "@nx/angular" (pid: 13876)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.941Z - Time taken for 'start-plugin-worker:@nx/angular' 638.8844ms
+[plugin-worker] "@nx/angular" (pid: 13876) connected
+[plugin-worker] "@nx/angular" (pid: 13876) loaded successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.947Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.947Z - [REQUEST]: 
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.947Z - [REQUEST]: 
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.948Z - Time taken for 'loadSpecifiedNxPlugins' 775.1393ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.949Z - Time taken for 'Load Nx Plugin: @nx/angular' 775.0401999999999ms
+[1m[33mTime taken for 'nx/core/project-json:createNodes' 0.40239999999994325ms[39m[22m
+[1m[33mTime taken for 'nx-angular-json-plugin:createNodes' 0.4369000000000369ms[39m[22m
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[isolated-plugin] shutting down worker for "nx-angular-json-plugin" after createNodes
+[1m[33mTime taken for 'nx/core/package-json:createNodes' 1.0742999999999938ms[39m[22m
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+[1m[33mTime taken for 'nx/js/dependencies-and-lockfile:createNodes' 10.973699999999894ms[39m[22m
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.983Z - Time taken for 'build-project-configs' 22.145299999999907ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.983Z - Time taken for 'createNodes:merge' 6.563200000000052ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.983Z - Time taken for 'native-file-deps' 0.011999999999943611ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.983Z - Time taken for 'get-workspace-files' 0.3160000000000309ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:29.983Z - Time taken for 'read cache' 0.2828999999999269ms
+[1m[33mTime taken for 'build typescript dependencies' 36.93430000000001ms[39m[22m
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:30.044Z - [SYNC]: collect registered sync generators
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:30.047Z - Wrote project graph cache to D:\onlineShop\.nx\workspace-data\project-graph.json
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:30.048Z - Time taken for 'total execution time for createProjectGraph()' 64.83539999999994ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:30.048Z - Time taken for 'createDependencies' 60.25150000000008ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:30.048Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 60.084499999999935ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:30.048Z - Time taken for 'createMetadata' 0.020099999999956708ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:30.048Z - Time taken for 'serialize graph' 0.8961000000001604ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:30.048Z - Time taken for 'write cache' 3.3864999999998417ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:31.231Z - [NX-CONSOLE]: Failed to use latest Nx for console status. Error: An error occurred while checking the provenance of nx@latest. This could indicate a security risk. Please double check https://www.npmjs.com/package/nx to see if the package is published correctly or file an issue at https://github.com/nrwl/nx/issues. To disable this check at your own risk, you can set the NX_SKIP_PROVENANCE_CHECK environment variable to true. 
+ Error: fetch failed
+DEBUG nx::native::ide::preferences: Loaded console preferences: NxConsolePreferences { auto_install_console: Some(true), path: "C:\\Users\\bodaghi.z\\.nx\\ide.json" }
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:31.231Z - [AI-AGENTS]: Failed to compute agent configuration status from latest Nx. Error: An error occurred while checking the provenance of nx@latest. This could indicate a security risk. Please double check https://www.npmjs.com/package/nx to see if the package is published correctly or file an issue at https://github.com/nrwl/nx/issues. To disable this check at your own risk, you can set the NX_SKIP_PROVENANCE_CHECK environment variable to true. 
+ Error: fetch failed
+DEBUG nx::native::ide::install: Detected editor: Unknown
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:15:31.231Z - [AI-AGENTS]: Agent configuration status computation completed: 0 fully configured, 0 outdated, 0 partially configured, 0 non-configured
+DEBUG nx::native::watch::watcher: registering watches for new directories dirs=["D:\\onlineShop\\src\\app\\test\\checkout"]
+DEBUG nx::native::watch::watcher: registering watches for new directories dirs=["D:\\onlineShop\\src\\app\\test\\checkout"]
+DEBUG nx::native::watch::watcher: registering watches for new directories dirs=["D:\\onlineShop\\src\\app\\test\\header\\auth-dialog"]
+DEBUG nx::native::watch::watcher: registering watches for new directories dirs=["D:\\onlineShop\\src\\app\\test\\header\\auth-dialog"]
+DEBUG nx::native::watch::watcher: registering watches for new directories dirs=["D:\\onlineShop\\src\\app\\test\\header\\sign-up-sheet"]
+DEBUG nx::native::watch::watcher: registering watches for new directories dirs=["D:\\onlineShop\\src\\app\\test\\header\\sign-up-sheet"]
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.413Z - [Server] lock file hash changed! old=9093403656976446474, new=9732555937433487764
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.414Z - [Server] Daemon outdated: LOCK_FILES_CHANGED
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.414Z - [Server] Restarting daemon...
+DEBUG nx::native::watch::watcher: watching stopped origin=D:\onlineShop
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.415Z - [WATCHER]: Stopping the watcher for D:\onlineShop (sources)
+DEBUG nx::native::watch::watcher: watching stopped origin=D:\onlineShop
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.415Z - Restarting daemon with script: D:\onlineShop\node_modules\nx\dist\src\daemon\server\start.js
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.415Z - Old daemon __dirname: D:\onlineShop\node_modules\nx\dist\src\daemon\server
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.415Z - Current process.execPath: C:\Program Files\nodejs\node.exe
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.424Z - Started new daemon process in background
+DEBUG nx::native::watch::watcher: watching stopped origin=D:\onlineShop
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.424Z - [WATCHER]: Stopping the watcher for D:\onlineShop (outputs)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.424Z - Server stopped because: "this process is no longer the current daemon (native)"
+Failed to flush telemetry: Telemetry channel closed
+DEBUG nx::native::watch::watcher: watching started origin=D:\onlineShop
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.667Z - [WATCHER]: Subscribed to changes within: D:\onlineShop (native)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.811Z - Time taken for 'workspace context init' 1.339400000000012ms
+DEBUG nx::native::telemetry: Telemetry service initialized successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.855Z - New daemon starting from: D:\onlineShop\node_modules\nx\dist\src\daemon\server\server.js
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.855Z - New daemon __dirname: D:\onlineShop\node_modules\nx\dist\src\daemon\server
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.855Z - New daemon nxVersion: 23.1.2
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.855Z - New daemon getInstalledNxVersion(): 23.1.2
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.859Z - [Server] Starting outdated check interval (20ms)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.861Z - Started listening on: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\ba56350d952e4bc16db9\d.sock
+DEBUG nx::native::watch::watcher: watching started origin=D:\onlineShop
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.872Z - [LATEST-NX]: Pulling latest Nx...
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:15.888Z - [AI-AGENTS]: Starting agent configuration status computation
+[isolated-plugin] spawned worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 6752, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-0-6147e223.sock)
+[isolated-plugin] spawned worker for "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 23772, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-1-95d1ab8d.sock)
+[isolated-plugin] spawned worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 28716, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-2-7fa9c5af.sock)
+[isolated-plugin] spawned worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 13248, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-3-eac02471.sock)
+[isolated-plugin] spawned worker for "@nx/angular" (pid: 24916, socket: \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-4-e0e363ce.sock)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.039Z - Time taken for 'hash changed files from watcher' 0.012600000000020373ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 23772) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-1-95d1ab8d.sock
+[isolated-plugin] connected to worker for "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 23772)
+[1m[33mTime taken for 'plugin worker 23772 code loading' 527.1393ms[39m[22m
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 23772) connected
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.555Z - Time taken for 'start-plugin-worker:D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json' 600.4008999999999ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json" (pid: 23772) loaded successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.559Z - Time taken for 'Load Nx Plugin: D:\onlineShop\node_modules\nx\dist\src\adapter\angular-json' 688.321ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 6752) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-0-6147e223.sock
+[1m[33mTime taken for 'plugin worker 6752 code loading' 563.8139000000001ms[39m[22m
+[isolated-plugin] connected to worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 6752)
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 6752) connected
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.583Z - Time taken for 'start-plugin-worker:D:\onlineShop\node_modules\nx\dist\src\plugins\js' 694.1768000000001ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\js" (pid: 6752) loaded successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.602Z - Time taken for 'Load Nx Plugin: D:\onlineShop\node_modules\nx\dist\src\plugins\js' 731.3864ms
+[isolated-plugin] connected to worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 28716)
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 28716) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-2-7fa9c5af.sock
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.614Z - Time taken for 'start-plugin-worker:D:\onlineShop\node_modules\nx\dist\src\plugins\package-json' 644.2526ms
+[1m[33mTime taken for 'plugin worker 28716 code loading' 571.6308ms[39m[22m
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 28716) connected
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\package-json" (pid: 28716) loaded successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.625Z - Time taken for 'Load Nx Plugin: D:\onlineShop\node_modules\nx\dist\src\plugins\package-json' 754.5437000000001ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 13248) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-3-eac02471.sock
+[1m[33mTime taken for 'plugin worker 13248 code loading' 556.8223ms[39m[22m
+[isolated-plugin] connected to worker for "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 13248)
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.644Z - Time taken for 'start-plugin-worker:D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json' 656.4118ms
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 13248) connected
+[plugin-worker] "D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json" (pid: 13248) loaded successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.648Z - Time taken for 'loadDefaultNxPlugins' 778.6963ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.648Z - Time taken for 'Load Nx Plugin: D:\onlineShop\node_modules\nx\dist\src\plugins\project-json\build-nodes\project-json' 776.8715000000001ms
+[plugin-worker] "@nx/angular" (pid: 24916) listening on \\.\pipe\nx\C:\Users\bodaghi.z\AppData\Local\Temp\3dcaa95b\p10872-4-e0e363ce.sock
+[isolated-plugin] connected to worker for "@nx/angular" (pid: 24916)
+[1m[33mTime taken for 'plugin worker 24916 code loading' 571.5587ms[39m[22m
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.670Z - Time taken for 'start-plugin-worker:@nx/angular' 660.2885000000001ms
+[plugin-worker] "@nx/angular" (pid: 24916) connected
+[plugin-worker] "@nx/angular" (pid: 24916) loaded successfully
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.676Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.676Z - [REQUEST]: 
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.676Z - [REQUEST]: 
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.678Z - Time taken for 'loadSpecifiedNxPlugins' 803.9164ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.678Z - Time taken for 'Load Nx Plugin: @nx/angular' 803.8302999999999ms
+[1m[33mTime taken for 'nx/core/project-json:createNodes' 0.38990000000001146ms[39m[22m
+[1m[33mTime taken for 'nx-angular-json-plugin:createNodes' 0.43240000000002965ms[39m[22m
+[isolated-plugin] shutting down worker for "nx/core/project-json" after createNodes
+[isolated-plugin] shutting down worker for "nx-angular-json-plugin" after createNodes
+[1m[33mTime taken for 'nx/core/package-json:createNodes' 1.2164999999999964ms[39m[22m
+[isolated-plugin] shutting down worker for "nx/core/package-json" after createNodes
+[1m[33mTime taken for 'nx/js/dependencies-and-lockfile:createNodes' 15.538599999999974ms[39m[22m
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.727Z - Time taken for 'build-project-configs' 35.22829999999999ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.727Z - Time taken for 'createNodes:merge' 10.793699999999944ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.727Z - Time taken for 'native-file-deps' 0.022100000000136788ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.727Z - Time taken for 'get-workspace-files' 0.3556999999998425ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.727Z - Time taken for 'read cache' 0.340900000000147ms
+DEBUG nx::native::plugins::js::ts_import_locators: D:\onlineShop\src\app\test\header\header.component.ts:9:0 Merge conflict marker encountered.
+DEBUG nx::native::plugins::js::ts_import_locators: D:\onlineShop\src\app\test\header\header.component.ts:12:0 Merge conflict marker encountered.
+DEBUG nx::native::plugins::js::ts_import_locators: D:\onlineShop\src\app\test\header\header.component.ts:15:0 Merge conflict marker encountered.
+[1m[33mTime taken for 'build typescript dependencies' 45.624900000000025ms[39m[22m
+[isolated-plugin] shutting down worker for "nx/js/dependencies-and-lockfile" after createDependencies
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.806Z - [SYNC]: collect registered sync generators
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.810Z - Wrote project graph cache to D:\onlineShop\.nx\workspace-data\project-graph.json
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.810Z - Time taken for 'total execution time for createProjectGraph()' 83.28719999999998ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.810Z - Time taken for 'createDependencies' 78.08650000000011ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.810Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 77.90200000000004ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.810Z - Time taken for 'createMetadata' 0.01700000000005275ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.810Z - Time taken for 'serialize graph' 0.9465999999999894ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:16.810Z - Time taken for 'write cache' 3.259599999999864ms
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:17.896Z - [NX-CONSOLE]: Failed to use latest Nx for console status. Error: An error occurred while checking the provenance of nx@latest. This could indicate a security risk. Please double check https://www.npmjs.com/package/nx to see if the package is published correctly or file an issue at https://github.com/nrwl/nx/issues. To disable this check at your own risk, you can set the NX_SKIP_PROVENANCE_CHECK environment variable to true. 
+ Error: fetch failed
+DEBUG nx::native::ide::preferences: Loaded console preferences: NxConsolePreferences { auto_install_console: Some(true), path: "C:\\Users\\bodaghi.z\\.nx\\ide.json" }
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:17.896Z - [AI-AGENTS]: Failed to compute agent configuration status from latest Nx. Error: An error occurred while checking the provenance of nx@latest. This could indicate a security risk. Please double check https://www.npmjs.com/package/nx to see if the package is published correctly or file an issue at https://github.com/nrwl/nx/issues. To disable this check at your own risk, you can set the NX_SKIP_PROVENANCE_CHECK environment variable to true. 
+ Error: fetch failed
+[NX v23.1.2 Daemon Server] - 2026-08-29T07:16:17.896Z - [AI-AGENTS]: Agent configuration status computation completed: 0 fully configured, 0 outdated, 0 partially configured, 0 non-configured
+DEBUG nx::native::ide::install: Detected editor: Unknown

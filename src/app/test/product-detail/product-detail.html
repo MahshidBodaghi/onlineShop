@@ -1,64 +1,124 @@
-<div class="product-detail-overlay" *ngIf="product" (click)="closeProductDetail()"></div>
+@if (product) {
+  <div class="product-detail-overlay" (click)="closeProductDetail()"></div>
 
-<div class="product-detail-panel" *ngIf="product as p">
-  <div class="product-detail-close">
-    <button class="product-detail-close-btn" (click)="closeProductDetail()">×</button>
+  <div class="product-detail-panel">
+
+    <div class="product-detail-close">
+      <button 
+        mat-icon-button 
+        type="button" 
+        aria-label="Close product details" 
+        (click)="closeProductDetail()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+
+    <div class="product-detail-image-box">
+      <img class="product-detail-image" [src]="product.imageURL" [alt]="product.name" />
+    </div>
+
+    <div class="product-detail-content">
+    
+      <div class="product-detail-name">
+        <h2>{{ product.name }}</h2>
+      </div>
+
+   
+      <mat-chip-set class="product-detail-categories" aria-label="Product categories">
+        @if (product.brand) {
+          <mat-chip>{{ product.brand }}</mat-chip>
+        }
+        @if (product.category) {
+          <mat-chip>{{ product.category }}</mat-chip>
+        }
+        @if (product.gender) {
+          <mat-chip>{{ product.gender }}</mat-chip>
+        }
+      </mat-chip-set>
+
+      <div class="product-detail-price">
+        @if (product.discountPrice) {
+          <span class="product-old-price">{{ product.price | currency }}</span>
+        }
+        <span class="product-new-price">
+          {{ (product.discountPrice || product.price) | currency }}
+        </span>
+      </div>
+
+
+      @if (product.size && product.size.length > 0) {
+        <div class="product-detail-section">
+          <div class="product-detail-section-title">
+            <h4>Size</h4>
+          </div>
+          <mat-button-toggle-group 
+            name="shoeSize" 
+            class="product-detail-sizes-group"
+            [(value)]="selectedSize" 
+            aria-label="Select Size">
+            @for (s of product.size; track s) {
+              <mat-button-toggle [value]="s">{{ s }}</mat-button-toggle>
+            }
+          </mat-button-toggle-group>
+        </div>
+      }
+
+      <mat-divider></mat-divider>
+
+
+      @if (product.color && product.color.length > 0) {
+        <div class="product-detail-section">
+          <div class="product-detail-section">
+            <div class="product-detail-section-title">
+              <h4>Color</h4>
+            </div>
+            <div class="product-detail-colors">
+              <button
+                type="button"
+                class="product-color"
+                *ngFor="let c of product?.color"
+                [style.backgroundColor]="c"
+                [class.selected]="selectedColor === c"
+                [attr.aria-label]="c"
+                (click)="selectColor(c)">
+              </button>
+            </div>
+          </div>
+          
+        </div>
+      }
+
+      <mat-divider></mat-divider>
+
+ 
+      <div class="product-detail-section">
+        <div class="product-detail-section-title">
+          <h4>Description</h4>
+        </div>
+        <p class="product-description-text">{{ product.description }}</p>
+      </div>
+
+  
+      <div class="product-detail-cart">
+        @if (product.is_in_inventory) {
+          <button 
+            mat-flat-button 
+            class="product-add-cart-btn" 
+            (click)="addToCart()">
+            <mat-icon>shopping_bag</mat-icon>
+            <span>ADD TO CART</span>
+          </button>
+        } @else {
+          <button 
+            mat-flat-button 
+            class="product-notify-btn" 
+            (click)="notifyMe()">
+            <mat-icon>notifications</mat-icon>
+            <span>NOTIFY ME</span>
+          </button>
+        }
+      </div>
+    </div>
   </div>
-
-  <div class="product-detail-image-box">
-    <img class="product-detail-image" [src]="p.imageURL" [alt]="p.name" />
-  </div>
-
-  <div class="product-detail-content">
-    <div class="product-detail-name">
-      <h2>{{ p.name }}</h2>
-    </div>
-
-    <div class="product-detail-categories">
-      <span>{{ p.brand }}</span>
-      <span>{{ p.category }}</span>
-      <span>{{ p.gender }}</span>
-    </div>
-
-    <div class="product-detail-price">
-      <p>
-        <span class="product-old-price" *ngIf="p.discountPrice">{{ p.price | currency }}</span>
-        <span class="product-new-price">{{ (p.discountPrice || p.price) | currency }}</span>
-      </p>
-    </div>
-
-    <div class="product-detail-section">
-      <div class="product-detail-section-title">
-        <h4>Size</h4>
-      </div>
-      <div class="product-detail-sizes">
-        <button class="product-size" *ngFor="let s of p.size">{{ s }}</button>
-      </div>
-    </div>
-
-    <div class="product-detail-section">
-      <div class="product-detail-section-title">
-        <h4>Color</h4>
-      </div>
-      <div class="product-detail-colors">
-        <button class="product-color" *ngFor="let c of p.color" [style.backgroundColor]="c"></button>
-      </div>
-    </div>
-
-    <div class="product-detail-description">
-      <div class="product-detail-section-title">
-        <h4>Description</h4>
-      </div>
-      <div class="product-description-text">
-        <p>{{ p.description }}</p>
-      </div>
-    </div>
-
-    <div class="product-detail-cart">
-      <button class="product-add-cart-btn" *ngIf="p.is_in_inventory; else notifyme">ADD TO CART</button>
-      <ng-template #notifyme>
-        <button class="product-notify-btn">NOTIFY ME</button>
-      </ng-template>
-    </div>
-  </div>
-</div>
+}

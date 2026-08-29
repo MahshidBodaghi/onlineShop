@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { Product } from './product/product';
 import { Filter } from './filter/filter';
 import { Search } from './search/search';
@@ -10,17 +11,21 @@ import { TopMenue } from './header/top-menue/top-menue';
 import { MainMenue } from './header/main-menue/main-menue';
 import { NavTop } from './header/nav-top/nav-top';
 import { HeaderComponent } from './header/header.component';
+import { CheckoutComponent } from './checkout/checkout';
 
 @Component({
   selector: 'test',
   standalone: true,
-  imports: [FormsModule, CommonModule, Product, Filter, Search, ProductDetail, HeaderComponent, NavTop],
+  imports: [FormsModule, CommonModule, Product, Filter, Search, ProductDetail, HeaderComponent, MatPaginatorModule,CheckoutComponent],
   templateUrl: './test.html',
   styleUrl: './test.css',
 })
 export class Test {
   searchText: string = '';
   selectedProduct: ProdModel | null = null;
+  pageIndex: number = 0;
+  pageSize: number = 8;
+  showCheckout: boolean = false;
 
   products: ProdModel[] = [
     {
@@ -506,16 +511,69 @@ export class Test {
   ];
 
   totalProductCount = this.products.length;
-  totalProductInStock = this.products.filter((p) => p.is_in_inventory === true).length;
-  totalProductOutOfStock = this.products.filter((p) => p.is_in_inventory === false).length;
+
+  totalProductInStock = this.products.filter(
+    (product) => product.is_in_inventory === true
+  ).length;
+
+  totalProductOutOfStock = this.products.filter(
+    (product) => product.is_in_inventory === false
+  ).length;
 
   selectedFilterRadioButton: string = 'all';
 
-  onFilterChange(value: string) {
-    this.selectedFilterRadioButton = value;
+
+  get filteredProducts(): ProdModel[] {
+    const searchValue = this.searchText.trim().toLocaleLowerCase();
+
+    return this.products.filter((product) => {
+      const matchesSearch =
+        searchValue === '' ||
+        product.name.toLocaleLowerCase().includes(searchValue);
+
+      const matchesFilter =
+
+          this.selectedFilterRadioButton === 'all' ||
+        product.is_in_inventory.toString() ===
+          this.selectedFilterRadioButton;
+
+      return matchesSearch && matchesFilter;
+    });
   }
 
-  setSearchText(el: string) {
-    this.searchText = el;
+  get paginatedProducts(): ProdModel[] {
+    const startIndex = this.pageIndex * this.pageSize;
+
+    return this.filteredProducts.slice(
+      startIndex,
+      startIndex + this.pageSize
+    );
+  }
+
+
+  onPageChange(event: PageEvent): void {
+    this.pageIndex = event.pageIndex;
+    this.pageSize = event.pageSize;
+  }
+
+
+  setSearchText(value: string): void {
+    this.searchText = value;
+    this.pageIndex = 0;
+  }
+
+
+  onFilterChange(value: string): void {
+    this.selectedFilterRadioButton = value;
+    this.pageIndex = 0;
+  }
+
+  openCheckout(): void {
+    this.showCheckout = true;
+    this.selectedProduct = null;
+  }
+  
+  closeCheckout(): void {
+    this.showCheckout = false;
   }
 }

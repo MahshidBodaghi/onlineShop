@@ -460,6 +460,36 @@
     "type": "static"
   },
   {
+    "source": "npm:@angular/cdk",
+    "target": "npm:@angular/common",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:@angular/core",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:@angular/platform-browser",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:rxjs",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:parse5",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/cdk",
+    "target": "npm:tslib",
+    "type": "static"
+  },
+  {
     "source": "npm:@angular/cli",
     "target": "npm:@angular-devkit/architect",
     "type": "static"
@@ -672,6 +702,41 @@
   {
     "source": "npm:@angular/forms",
     "target": "npm:zod",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/material",
+    "target": "npm:@angular/cdk",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/material",
+    "target": "npm:@angular/common",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/material",
+    "target": "npm:@angular/core",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/material",
+    "target": "npm:@angular/forms",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/material",
+    "target": "npm:@angular/platform-browser",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/material",
+    "target": "npm:rxjs",
+    "type": "static"
+  },
+  {
+    "source": "npm:@angular/material",
+    "target": "npm:tslib",
     "type": "static"
   },
   {

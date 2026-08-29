@@ -1,9 +1,22 @@
+
 .ocart--menu {
-    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .ocart--menu a,
+  .ocart--menu button {
+    text-decoration: none;
+    color: inherit;
     color: #36454f;
-    font-family: "Montserrat", sans-serif;
-    font-weight: normal;
-    font-size: 16px;
-    width: 70%;
-    text-align: start;
-}
+    font: weight 500px;;
+    font-size: 15px;
+  }
+  
+  .ocart--menu button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
