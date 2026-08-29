@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx serve --port 4300",
+    "startTime": "2026-08-29T07:04:05.347Z",
+    "endTime": "2026-08-29T07:10:55.450Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "my-first-app:serve:development",
+      "target": "serve",
+      "projectName": "my-first-app",
+      "hash": "12875841082715728561",
+      "startTime": "2026-08-29T07:04:05.359Z",
+      "endTime": "2026-08-29T07:10:55.402Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

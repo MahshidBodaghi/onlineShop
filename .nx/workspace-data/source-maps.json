@@ -1,0 +1,266 @@
+{
+  ".": {
+    "root": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets": [
+      "nx.json#targetDefaults.build",
+      "nx/target-defaults"
+    ],
+    "targets.build": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.cache": [
+      "nx.json#targetDefaults.build",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn.0": [
+      "nx.json#targetDefaults.build",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json#targetDefaults.build",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs.0": [
+      "nx.json#targetDefaults.build",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs.1": [
+      "nx.json#targetDefaults.build",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json#targetDefaults.build",
+      "nx/target-defaults"
+    ],
+    "targets.build.executor": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.test": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.test.cache": [
+      "nx.json#targetDefaults.test",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs.0": [
+      "nx.json#targetDefaults.test",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs.1": [
+      "nx.json#targetDefaults.test",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs": [
+      "nx.json#targetDefaults.test",
+      "nx/target-defaults"
+    ],
+    "targets.test.executor": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "projectType": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "sourceRoot": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "prefix": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "name": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "generators": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.defaultConfiguration": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.options.browser": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.options.tsConfig": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.options.assets.0": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.options.assets": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.options.styles.0": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.options.styles": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.options": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations.production.budgets.0": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations.production.budgets.1": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations.production.budgets": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations.production.outputHashing": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations.production": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations.development.optimization": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations.development.extractLicenses": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations.development.sourceMap": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations.development": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.build.configurations": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.serve": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.serve.executor": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.serve.configurations.production": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.serve.configurations.development": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ],
+    "targets.serve.configurations": [
+      "angular.json",
+      "nx-angular-json-plugin"
+    ]
+  },
+  "libs/shared/models": {
+    "root": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.cache": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.0": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.1": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.2": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.3": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.4": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.5": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.executor": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ]
+  }
+}
