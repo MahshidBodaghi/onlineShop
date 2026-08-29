@@ -193,6 +193,154 @@
       "nx-angular-json-plugin"
     ]
   },
+  "libs/products/feature": {
+    "root": [
+      "libs/products/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint": [
+      "libs/products/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.cache": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.0": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.1": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.2": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.3": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.4": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.5": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.executor": [
+      "libs/products/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/products/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/products/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/products/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "libs/products/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/products/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/products/feature/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/shared/data-access": {
+    "root": [
+      "libs/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint": [
+      "libs/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.cache": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.0": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.1": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.2": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.3": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.4": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.5": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.executor": [
+      "libs/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "libs/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/shared/data-access/project.json",
+      "nx/core/project-json"
+    ]
+  },
   "libs/shared/models": {
     "root": [
       "libs/shared/models/project.json",
@@ -264,6 +412,80 @@
     ],
     "tags": [
       "libs/shared/models/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/shared/ui": {
+    "root": [
+      "libs/shared/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint": [
+      "libs/shared/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.cache": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.0": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.1": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.2": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.3": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.4": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs.5": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json#targetDefaults.@nx/eslint:lint",
+      "nx/target-defaults"
+    ],
+    "targets.lint.executor": [
+      "libs/shared/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/shared/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "libs/shared/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/shared/ui/project.json",
       "nx/core/project-json"
     ]
   }

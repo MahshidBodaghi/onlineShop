@@ -1,16 +1,9 @@
-import {
-  Component,
-  Input,
-  CUSTOM_ELEMENTS_SCHEMA
-} from '@angular/core';
-
+import { Component,Input,} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProdModel } from '@onlineShop/models';
-
 import { MatCard, MatCardContent } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
-import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'product',
@@ -21,7 +14,6 @@ import { MatButton } from '@angular/material/button';
     MatCardContent,
     MatIcon,
     MatTooltip,
-    MatButton
   ],
   templateUrl: './product.html',
   styleUrl: './product.css',

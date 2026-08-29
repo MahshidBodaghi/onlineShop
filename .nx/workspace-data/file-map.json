@@ -3,7 +3,16 @@
   "nxVersion": "23.1.2",
   "pathMappings": {
     "@onlineShop/models": [
-      "./libs/shared/models/src/index.ts"
+      "libs/shared/models/src/index.ts"
+    ],
+    "@onlineShop/ui": [
+      "libs/shared/ui/src/index.ts"
+    ],
+    "@onlineShop/data-access": [
+      "./libs/shared/data-access/src/index.ts"
+    ],
+    "@onlineShop/feature": [
+      "./libs/products/feature/src/index.ts"
     ]
   },
   "nxJsonPlugins": [
@@ -16,6 +25,53 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
+      "ui": [
+        {
+          "file": "libs/shared/ui/README.md",
+          "hash": "12870269544986837831"
+        },
+        {
+          "file": "libs/shared/ui/eslint.config.mjs",
+          "hash": "10762669354477532035",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/project.json",
+          "hash": "2994638933535073806"
+        },
+        {
+          "file": "libs/shared/ui/src/index.ts",
+          "hash": "3666922192385005446"
+        },
+        {
+          "file": "libs/shared/ui/src/lib/product/product.css",
+          "hash": "17564256249956463950"
+        },
+        {
+          "file": "libs/shared/ui/src/lib/product/product.html",
+          "hash": "8472508210759015193"
+        },
+        {
+          "file": "libs/shared/ui/src/lib/product/product.ts",
+          "hash": "1630278260762918258",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "models",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui/tsconfig.json",
+          "hash": "2043616985797529547"
+        },
+        {
+          "file": "libs/shared/ui/tsconfig.lib.json",
+          "hash": "2571691299537351603"
+        }
+      ],
       "my-first-app": [
         {
           "file": ".editorconfig",
@@ -39,7 +95,7 @@
         },
         {
           "file": ".vscode/extensions.json",
-          "hash": "16986464762141576225"
+          "hash": "4194304421967065169"
         },
         {
           "file": ".vscode/launch.json",
@@ -55,7 +111,7 @@
         },
         {
           "file": "angular.json",
-          "hash": "3928236916881405960"
+          "hash": "16992144275025957875"
         },
         {
           "file": "eslint.config.mjs",
@@ -145,236 +201,12 @@
         },
         {
           "file": "src/app/app.ts",
-          "hash": "10388899446307567298",
+          "hash": "6162904705990831419",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
+            "feature",
             "models"
-          ]
-        },
-        {
-          "file": "src/app/services/product.spec.ts",
-          "hash": "8062236968936913086",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "src/app/services/product.ts",
-          "hash": "17388222641180910764",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "src/app/test/checkout/checkout.css",
-          "hash": "12958327331340200013"
-        },
-        {
-          "file": "src/app/test/checkout/checkout.html",
-          "hash": "14696044502953058018"
-        },
-        {
-          "file": "src/app/test/checkout/checkout.spec.ts",
-          "hash": "12587824003981454911",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "src/app/test/checkout/checkout.ts",
-          "hash": "6534224240816920289",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "npm:@angular/forms",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "src/app/test/filter/filter.css",
-          "hash": "12075825339690216197"
-        },
-        {
-          "file": "src/app/test/filter/filter.html",
-          "hash": "15713599928833545374"
-        },
-        {
-          "file": "src/app/test/filter/filter.ts",
-          "hash": "5402361723295267315",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "src/app/test/header/auth-dialog/auth-dialog.css",
-          "hash": "5927477422116089397"
-        },
-        {
-          "file": "src/app/test/header/auth-dialog/auth-dialog.html",
-          "hash": "3754576638249276020"
-        },
-        {
-          "file": "src/app/test/header/auth-dialog/auth-dialog.ts",
-          "hash": "12845193251810704227",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "src/app/test/header/header.component.css",
-          "hash": "14069955083508786799"
-        },
-        {
-          "file": "src/app/test/header/header.component.html",
-          "hash": "5536566006780078642"
-        },
-        {
-          "file": "src/app/test/header/header.component.ts",
-          "hash": "772569914590015453",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "src/app/test/header/main-menue/main-menue.css",
-          "hash": "6008961815240227031"
-        },
-        {
-          "file": "src/app/test/header/main-menue/main-menue.html",
-          "hash": "6944923702917387667"
-        },
-        {
-          "file": "src/app/test/header/main-menue/main-menue.ts",
-          "hash": "13627847059746075366",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "src/app/test/header/nav-top/nav-top.css",
-          "hash": "16470141908189003285"
-        },
-        {
-          "file": "src/app/test/header/nav-top/nav-top.html",
-          "hash": "10069968429623197107"
-        },
-        {
-          "file": "src/app/test/header/nav-top/nav-top.ts",
-          "hash": "17512604831158109066",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "src/app/test/header/sign-up-sheet/sign-up-sheet.css",
-          "hash": "1588637420679915696"
-        },
-        {
-          "file": "src/app/test/header/sign-up-sheet/sign-up-sheet.html",
-          "hash": "14244291414739772362"
-        },
-        {
-          "file": "src/app/test/header/sign-up-sheet/sign-up-sheet.ts",
-          "hash": "114282545434292501",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "src/app/test/header/top-menue/top-menue.css",
-          "hash": "8158424837681458779"
-        },
-        {
-          "file": "src/app/test/header/top-menue/top-menue.html",
-          "hash": "1236663892581967762"
-        },
-        {
-          "file": "src/app/test/header/top-menue/top-menue.ts",
-          "hash": "14101797995798673946",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "src/app/test/product-detail/product-detail.css",
-          "hash": "10179969777833912588"
-        },
-        {
-          "file": "src/app/test/product-detail/product-detail.html",
-          "hash": "12535362792342290757"
-        },
-        {
-          "file": "src/app/test/product-detail/product-detail.ts",
-          "hash": "2649395310963093300",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "npm:@angular/material",
-            "models"
-          ]
-        },
-        {
-          "file": "src/app/test/product/product.css",
-          "hash": "17564256249956463950"
-        },
-        {
-          "file": "src/app/test/product/product.html",
-          "hash": "8472508210759015193"
-        },
-        {
-          "file": "src/app/test/product/product.ts",
-          "hash": "494581972299257981",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "models",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "src/app/test/search/search.css",
-          "hash": "7590249431842108432"
-        },
-        {
-          "file": "src/app/test/search/search.html",
-          "hash": "921010502398445794"
-        },
-        {
-          "file": "src/app/test/search/search.ts",
-          "hash": "15632752626810041378",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "npm:@angular/forms",
-            "npm:@angular/material"
-          ]
-        },
-        {
-          "file": "src/app/test/test.css",
-          "hash": "13474740870281947381"
-        },
-        {
-          "file": "src/app/test/test.html",
-          "hash": "17055216845090921665"
-        },
-        {
-          "file": "src/app/test/test.ts",
-          "hash": "18325502791547372874",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/forms",
-            "npm:@angular/common",
-            "models",
-            "npm:@angular/material"
           ]
         },
         {
@@ -402,7 +234,7 @@
         },
         {
           "file": "tsconfig.base.json",
-          "hash": "12110082806229563126"
+          "hash": "14512641050291999900"
         },
         {
           "file": "tsconfig.json",
@@ -411,6 +243,49 @@
         {
           "file": "tsconfig.spec.json",
           "hash": "7244135782862428369"
+        }
+      ],
+      "data-access": [
+        {
+          "file": "libs/shared/data-access/README.md",
+          "hash": "10562569861016511150"
+        },
+        {
+          "file": "libs/shared/data-access/eslint.config.mjs",
+          "hash": "10762669354477532035",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/data-access/project.json",
+          "hash": "2880418469217632317"
+        },
+        {
+          "file": "libs/shared/data-access/src/index.ts",
+          "hash": "11435836547003546190"
+        },
+        {
+          "file": "libs/shared/data-access/src/lib/services/product.spec.ts",
+          "hash": "8062236968936913086",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/data-access/src/lib/services/product.ts",
+          "hash": "17388222641180910764",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/data-access/tsconfig.json",
+          "hash": "2043616985797529547"
+        },
+        {
+          "file": "libs/shared/data-access/tsconfig.lib.json",
+          "hash": "2571691299537351603"
         }
       ],
       "models": [
@@ -448,6 +323,39 @@
         {
           "file": "libs/shared/models/tsconfig.lib.json",
           "hash": "8720315681444446726"
+        }
+      ],
+      "feature": [
+        {
+          "file": "libs/products/feature/eslint.config.mjs",
+          "hash": "10762669354477532035",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/products/feature/project.json",
+          "hash": "14136300520761645616"
+        },
+        {
+          "file": "libs/products/feature/src/index.ts",
+          "hash": "3119985003488113217"
+        },
+        {
+          "file": "libs/products/feature/src/lib/feature/feature.html",
+          "hash": "5052152540749166482"
+        },
+        {
+          "file": "libs/products/feature/src/lib/feature/feature.ts",
+          "hash": "16423897138764304277"
+        },
+        {
+          "file": "libs/products/feature/tsconfig.json",
+          "hash": "2043616985797529547"
+        },
+        {
+          "file": "libs/products/feature/tsconfig.lib.json",
+          "hash": "2571691299537351603"
         }
       ]
     }

@@ -6,15 +6,25 @@ import { Search } from './search/search';
 import { ProductDetail } from './product-detail/product-detail';
 import { HeaderComponent } from './header/header.component';
 import { CheckoutComponent } from './checkout/checkout';
-import { Product } from './product/product';
+import { Product } from '@onlineShop/ui';
 import { ProdModel } from '@onlineShop/models';
-import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
-
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'test',
   standalone: true,
-  imports: [FormsModule, CommonModule, Filter, Search, ProductDetail, HeaderComponent,Product, MatPaginatorModule,CheckoutComponent],
+  imports: [
+    FormsModule,
+    CommonModule,
+    Product,
+    Filter,
+    Search,
+    ProductDetail,
+    HeaderComponent,
+    MatPaginator,
+    CheckoutComponent,
+   
+  ],
   templateUrl: './test.html',
   styleUrl: './test.css',
 })

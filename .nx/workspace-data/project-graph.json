@@ -1,5 +1,67 @@
 {
   "nodes": {
+    "data-access": {
+      "name": "data-access",
+      "type": "lib",
+      "data": {
+        "root": "libs/shared/data-access",
+        "targets": {
+          "lint": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.mjs",
+              "{workspaceRoot}/tools/eslint-rules/**/*"
+            ],
+            "executor": "@nx/eslint:lint",
+            "configurations": {},
+            "options": {},
+            "parallelism": true
+          }
+        },
+        "name": "data-access",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/shared/data-access/src",
+        "prefix": "lib",
+        "projectType": "library",
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
+    "feature": {
+      "name": "feature",
+      "type": "lib",
+      "data": {
+        "root": "libs/products/feature",
+        "targets": {
+          "lint": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.mjs",
+              "{workspaceRoot}/tools/eslint-rules/**/*"
+            ],
+            "executor": "@nx/eslint:lint",
+            "configurations": {},
+            "options": {},
+            "parallelism": true
+          }
+        },
+        "name": "feature",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/products/feature/src",
+        "prefix": "lib",
+        "projectType": "library",
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
     "models": {
       "name": "models",
       "type": "lib",
@@ -25,6 +87,37 @@
         "name": "models",
         "$schema": "../../../node_modules/nx/schemas/project-schema.json",
         "sourceRoot": "libs/shared/models/src",
+        "prefix": "lib",
+        "projectType": "library",
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
+    "ui": {
+      "name": "ui",
+      "type": "lib",
+      "data": {
+        "root": "libs/shared/ui",
+        "targets": {
+          "lint": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.mjs",
+              "{workspaceRoot}/tools/eslint-rules/**/*"
+            ],
+            "executor": "@nx/eslint:lint",
+            "configurations": {},
+            "options": {},
+            "parallelism": true
+          }
+        },
+        "name": "ui",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/shared/ui/src",
         "prefix": "lib",
         "projectType": "library",
         "tags": [],
@@ -67,13 +160,13 @@
                 "budgets": [
                   {
                     "type": "initial",
-                    "maximumWarning": "500kB",
-                    "maximumError": "1MB"
+                    "maximumWarning": "1.5mb",
+                    "maximumError": "2mb"
                   },
                   {
                     "type": "anyComponentStyle",
-                    "maximumWarning": "4kB",
-                    "maximumError": "8kB"
+                    "maximumWarning": "10kb",
+                    "maximumError": "20kb"
                   }
                 ],
                 "outputHashing": "all"
@@ -7847,10 +7940,56 @@
     }
   },
   "dependencies": {
+    "data-access": [
+      {
+        "source": "data-access",
+        "target": "npm:@nx/eslint-plugin",
+        "type": "static"
+      },
+      {
+        "source": "data-access",
+        "target": "npm:@angular/core",
+        "type": "static"
+      }
+    ],
+    "feature": [
+      {
+        "source": "feature",
+        "target": "npm:@nx/eslint-plugin",
+        "type": "static"
+      }
+    ],
     "models": [
       {
         "source": "models",
         "target": "npm:@nx/eslint-plugin",
+        "type": "static"
+      }
+    ],
+    "ui": [
+      {
+        "source": "ui",
+        "target": "npm:@nx/eslint-plugin",
+        "type": "static"
+      },
+      {
+        "source": "ui",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "ui",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "ui",
+        "target": "models",
+        "type": "static"
+      },
+      {
+        "source": "ui",
+        "target": "npm:@angular/material",
         "type": "static"
       }
     ],
@@ -8023,6 +8162,11 @@
       {
         "source": "my-first-app",
         "target": "npm:tslib",
+        "type": "static"
+      },
+      {
+        "source": "my-first-app",
+        "target": "feature",
         "type": "static"
       },
       {
@@ -17648,5 +17792,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1788003458426
+  "computedAt": 1788014520086
 }
