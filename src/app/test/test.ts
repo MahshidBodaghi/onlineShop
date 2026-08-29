@@ -1,22 +1,20 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
-import { Product } from './product/product';
 import { Filter } from './filter/filter';
 import { Search } from './search/search';
-import { ProdModel } from '../models/prodModel';
 import { ProductDetail } from './product-detail/product-detail';
-import { TopMenue } from './header/top-menue/top-menue';
-import { MainMenue } from './header/main-menue/main-menue';
-import { NavTop } from './header/nav-top/nav-top';
 import { HeaderComponent } from './header/header.component';
 import { CheckoutComponent } from './checkout/checkout';
+import { Product } from './product/product';
+import { ProdModel } from '@onlineShop/models';
+import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
+
 
 @Component({
   selector: 'test',
   standalone: true,
-  imports: [FormsModule, CommonModule, Product, Filter, Search, ProductDetail, HeaderComponent, MatPaginatorModule,CheckoutComponent],
+  imports: [FormsModule, CommonModule, Filter, Search, ProductDetail, HeaderComponent,Product, MatPaginatorModule,CheckoutComponent],
   templateUrl: './test.html',
   styleUrl: './test.css',
 })

@@ -1,11 +1,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "ES2022",
+    "rootDir": ".",
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "bundler",
     "module": "preserve",
-    "skipLibCheck": true,
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
     "paths": {
       "@onlineShop/models": ["./libs/shared/models/src/index.ts"]
     }

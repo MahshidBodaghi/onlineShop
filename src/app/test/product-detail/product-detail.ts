@@ -7,7 +7,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { ProdModel } from '../../models/prodModel';
+import { ProdModel } from '../../../../libs/shared/models/src/lib/prodModel';
 import { CheckoutComponent } from '../checkout/checkout';
 
 

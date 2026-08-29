@@ -1,3 +1,4 @@
+
 export class ProdModel {
   id!: number;
   name!: string;

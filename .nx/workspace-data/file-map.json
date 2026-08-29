@@ -70,11 +70,11 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "2134200588249498282"
+          "hash": "544005163144334341"
         },
         {
           "file": "package.json",
-          "hash": "5146304226915459427",
+          "hash": "252270405295993784",
           "deps": [
             "npm:@angular-devkit/core",
             "npm:@angular-devkit/schematics",
@@ -99,6 +99,7 @@
             "npm:typescript",
             "npm:typescript-eslint",
             "npm:vitest",
+            "npm:@angular/animations",
             "npm:@angular/cdk",
             "npm:@angular/common",
             "npm:@angular/compiler",
@@ -150,10 +151,6 @@
             "npm:@angular/router",
             "models"
           ]
-        },
-        {
-          "file": "src/app/models/prodModel.ts",
-          "hash": "5427293605169607658"
         },
         {
           "file": "src/app/services/product.spec.ts",
@@ -317,11 +314,12 @@
         },
         {
           "file": "src/app/test/product-detail/product-detail.ts",
-          "hash": "11101082900812756882",
+          "hash": "2649395310963093300",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
-            "npm:@angular/material"
+            "npm:@angular/material",
+            "models"
           ]
         },
         {
@@ -334,10 +332,11 @@
         },
         {
           "file": "src/app/test/product/product.ts",
-          "hash": "5514895579621370956",
+          "hash": "494581972299257981",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
+            "models",
             "npm:@angular/material"
           ]
         },
@@ -369,11 +368,12 @@
         },
         {
           "file": "src/app/test/test.ts",
-          "hash": "9839943591606625018",
+          "hash": "18325502791547372874",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/forms",
             "npm:@angular/common",
+            "models",
             "npm:@angular/material"
           ]
         },
@@ -398,11 +398,11 @@
         },
         {
           "file": "tsconfig.app.json",
-          "hash": "7353619282190324351"
+          "hash": "578475842409105462"
         },
         {
           "file": "tsconfig.base.json",
-          "hash": "6524837140119660111"
+          "hash": "12110082806229563126"
         },
         {
           "file": "tsconfig.json",
@@ -431,37 +431,26 @@
         },
         {
           "file": "libs/shared/models/src/index.ts",
-          "hash": "4654823105923196965"
+          "hash": "17633769955985292189"
         },
         {
-          "file": "libs/shared/models/src/lib/models/models.css",
-          "hash": "3244421341483603138"
+          "file": "libs/shared/models/src/lib/prodModel.ts",
+          "hash": "4745059180540295470"
         },
         {
-          "file": "libs/shared/models/src/lib/models/models.html",
-          "hash": "10034085234440186784"
-        },
-        {
-          "file": "libs/shared/models/src/lib/models/models.ts",
-          "hash": "9360761176945926196",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "libs/shared/models/src/lib/models/product.model.ts",
-          "hash": "11292577232102200528"
+          "file": "libs/shared/models/src/lib/product.model.ts",
+          "hash": "720897819663345863"
         },
         {
           "file": "libs/shared/models/tsconfig.json",
-          "hash": "11290668968768156580"
+          "hash": "2167180680149028718"
         },
         {
           "file": "libs/shared/models/tsconfig.lib.json",
-          "hash": "2571691299537351603"
+          "hash": "8720315681444446726"
         }
       ]
     }
   },
-  "externalNodesHash": "3967143247191153846"
+  "externalNodesHash": "4871042453198987971"
 }
