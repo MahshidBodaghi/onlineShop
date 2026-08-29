@@ -6,7 +6,7 @@ import { NavTop } from "./nav-top/nav-top";
   selector: 'app-header',
   standalone: true,
   imports: [TopMenue, MainMenue,NavTop],
- // changeDetection: ChangeDetectionStrategy.Default,
+
   templateUrl:'./header.component.html',
   styleUrl: './header.component.css',
 })

@@ -1,6 +1,4 @@
-/* =========================================
-   SEARCH BAR
-========================================= */
+
 .oCart--search--product {
   width: 575px;
   height: 25px;
@@ -42,9 +40,6 @@
   background-color: #111;
 }
 
-/* =========================================
-   SEARCH RESULT
-========================================= */
 .oCart-search-result-for {
   width: 1040px;
   margin: 0 auto 25px;
