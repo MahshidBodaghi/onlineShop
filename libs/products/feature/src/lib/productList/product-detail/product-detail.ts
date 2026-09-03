@@ -7,9 +7,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { ProdModel } from '../../../../libs/shared/models/src/lib/prodModel';
+import { ProdModel } from '@onlineShop/models';
 import { CheckoutComponent } from '../checkout/checkout';
-
 
 @Component({
   selector: 'product-detail',
@@ -23,7 +22,6 @@ import { CheckoutComponent } from '../checkout/checkout';
     MatTooltipModule,
     MatDividerModule,
     MatSnackBarModule,
-    
   ],
   templateUrl: './product-detail.html',
   styleUrl: './product-detail.css',
@@ -50,16 +48,16 @@ export class ProductDetail {
     this.snackBar.open(
       `Added "${this.product?.name}" (Size: ${this.selectedSize || 'Default'}) to cart!`,
       'Close',
-      { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' }
+      { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' },
     );
     this.checkoutRequested.emit();
   }
 
   notifyMe(): void {
-    this.snackBar.open(
-      'You will be notified as soon as this product is back in stock!',
-      'Got it',
-      { duration: 3000, horizontalPosition: 'center', verticalPosition: 'bottom' }
-    );
+    this.snackBar.open('You will be notified as soon as this product is back in stock!', 'Got it', {
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+    });
   }
 }

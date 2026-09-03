@@ -1,0 +1,5 @@
+{
+  "HEADER": { "HOME": "Home", "SHOES": "Shoes", "BRANDS": "Brands", "SERVICES": "Services" },
+  "MENU": { "RUNNING": "Running Shoes", "BASKETBALL": "Basketball Shoes", "HIKING": "Hiking Shoes", "CASUAL": "Casual Sneakers" },
+  "SERVICES": { "SIZE_GUIDE": "Size Guide", "SHIPPING": "Shipping Info", "RETURNS": "Returns", "SUPPORT": "Support" }
+}

@@ -5,7 +5,9 @@
   flex-direction: column;
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .oCart--product--item:hover {
@@ -36,7 +38,13 @@
   background: #fff;
 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .oCart--add--to--wishlist:hover {
   color: #e53935;

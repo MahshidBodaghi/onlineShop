@@ -23,10 +23,9 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
     HeaderComponent,
     MatPaginator,
     CheckoutComponent,
-   
   ],
-  templateUrl: './test.html',
-  styleUrl: './test.css',
+  templateUrl: './productList.html',
+  styleUrl: './productList.css',
 })
 export class Test {
   searchText: string = '';
@@ -520,30 +519,23 @@ export class Test {
 
   totalProductCount = this.products.length;
 
-  totalProductInStock = this.products.filter(
-    (product) => product.is_in_inventory === true
-  ).length;
+  totalProductInStock = this.products.filter((product) => product.is_in_inventory === true).length;
 
-  totalProductOutOfStock = this.products.filter(
-    (product) => product.is_in_inventory === false
-  ).length;
+  totalProductOutOfStock = this.products.filter((product) => product.is_in_inventory === false)
+    .length;
 
   selectedFilterRadioButton: string = 'all';
-
 
   get filteredProducts(): ProdModel[] {
     const searchValue = this.searchText.trim().toLocaleLowerCase();
 
     return this.products.filter((product) => {
       const matchesSearch =
-        searchValue === '' ||
-        product.name.toLocaleLowerCase().includes(searchValue);
+        searchValue === '' || product.name.toLocaleLowerCase().includes(searchValue);
 
       const matchesFilter =
-
-          this.selectedFilterRadioButton === 'all' ||
-        product.is_in_inventory.toString() ===
-          this.selectedFilterRadioButton;
+        this.selectedFilterRadioButton === 'all' ||
+        product.is_in_inventory.toString() === this.selectedFilterRadioButton;
 
       return matchesSearch && matchesFilter;
     });
@@ -552,24 +544,18 @@ export class Test {
   get paginatedProducts(): ProdModel[] {
     const startIndex = this.pageIndex * this.pageSize;
 
-    return this.filteredProducts.slice(
-      startIndex,
-      startIndex + this.pageSize
-    );
+    return this.filteredProducts.slice(startIndex, startIndex + this.pageSize);
   }
-
 
   onPageChange(event: PageEvent): void {
     this.pageIndex = event.pageIndex;
     this.pageSize = event.pageSize;
   }
 
-
   setSearchText(value: string): void {
     this.searchText = value;
     this.pageIndex = 0;
   }
-
 
   onFilterChange(value: string): void {
     this.selectedFilterRadioButton = value;
@@ -580,7 +566,7 @@ export class Test {
     this.showCheckout = true;
     this.selectedProduct = null;
   }
-  
+
   closeCheckout(): void {
     this.showCheckout = false;
   }

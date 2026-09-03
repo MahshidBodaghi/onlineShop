@@ -1,0 +1,5 @@
+{
+  "HEADER": { "HOME": "خانه", "SHOES": "کفش", "BRANDS": "برندها", "SERVICES": "خدمات" },
+  "MENU": { "RUNNING": "کفش دویدن", "BASKETBALL": "کفش بسکتبال", "HIKING": "کفش کوهنوردی", "CASUAL": "کتانی کژوال" },
+  "SERVICES": { "SIZE_GUIDE": "راهنمای سایز", "SHIPPING": "اطلاعات ارسال", "RETURNS": "مرجوعی", "SUPPORT": "پشتیبانی" }
+}

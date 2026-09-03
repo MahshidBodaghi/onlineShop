@@ -1,0 +1,87 @@
+<div class="ocart--menu">
+  <button
+    mat-button
+    [matMenuTriggerFor]="langMenu"
+    aria-label="Change language"
+    class="lang-menu-btn"
+  >
+    <mat-icon>language</mat-icon>
+    <span>{{ translate.currentLang()?.toUpperCase() || 'EN' }}</span>
+    <mat-icon>expand_more</mat-icon>
+  </button>
+
+  <mat-menu #langMenu="matMenu">
+    <button mat-menu-item (click)="changeLang('en')">
+      @if (translate.currentLang() === 'en') {
+        <mat-icon>check</mat-icon>
+      }
+      <span>English</span>
+    </button>
+    <button mat-menu-item (click)="changeLang('fa')">
+      @if (translate.currentLang() === 'fa') {
+        <mat-icon>check</mat-icon>
+      }
+      <span>فارسی</span>
+    </button>
+  </mat-menu>
+
+  <a mat-button routerLink="/">
+    <mat-icon>home</mat-icon>
+    <span>{{ 'HEADER.HOME' | translate }}</span>
+  </a>
+
+  <button mat-button [matMenuTriggerFor]="productsMenu">
+    <mat-icon>directions_run</mat-icon>
+    <span>{{ 'HEADER.SHOES' | translate }}</span>
+    <mat-icon>expand_more</mat-icon>
+  </button>
+
+  <button mat-button [matMenuTriggerFor]="brandsMenu">
+    <mat-icon>verified</mat-icon>
+    <span>{{ 'HEADER.BRANDS' | translate }}</span>
+    <mat-icon>expand_more</mat-icon>
+  </button>
+
+  <button mat-button [matMenuTriggerFor]="servicesMenu">
+    <mat-icon>support_agent</mat-icon>
+    <span>{{ 'HEADER.SERVICES' | translate }}</span>
+    <mat-icon>expand_more</mat-icon>
+  </button>
+</div>
+
+<mat-menu #productsMenu="matMenu">
+  <button mat-menu-item>
+    <span>{{ 'MENU.RUNNING' | translate }}</span>
+  </button>
+  <button mat-menu-item>
+    <span>{{ 'MENU.BASKETBALL' | translate }}</span>
+  </button>
+  <button mat-menu-item>
+    <span>{{ 'MENU.HIKING' | translate }}</span>
+  </button>
+  <button mat-menu-item>
+    <span>{{ 'MENU.CASUAL' | translate }}</span>
+  </button>
+</mat-menu>
+
+<mat-menu #brandsMenu="matMenu">
+  <button mat-menu-item><span>Nike</span></button>
+  <button mat-menu-item><span>Adidas</span></button>
+  <button mat-menu-item><span>Puma</span></button>
+  <button mat-menu-item><span>New Balance</span></button>
+</mat-menu>
+
+<mat-menu #servicesMenu="matMenu">
+  <button mat-menu-item>
+    <span>{{ 'SERVICES.SIZE_GUIDE' | translate }}</span>
+  </button>
+  <button mat-menu-item>
+    <span>{{ 'SERVICES.SHIPPING' | translate }}</span>
+  </button>
+  <button mat-menu-item>
+    <span>{{ 'SERVICES.RETURNS' | translate }}</span>
+  </button>
+  <button mat-menu-item>
+    <span>{{ 'SERVICES.SUPPORT' | translate }}</span>
+  </button>
+</mat-menu>
